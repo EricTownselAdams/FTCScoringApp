@@ -10,6 +10,8 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 public class ScoringScreen extends AppCompatActivity  {
+
+    public int CapBallScoreAVar;
     Spinner CapBallSpinA;
     ArrayAdapter<CharSequence> CapBallAdapterAA;
 
@@ -24,12 +26,12 @@ public class ScoringScreen extends AppCompatActivity  {
         CapBallSpinA.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-              //  Toast.makeText()(getBaseContext(),parent.getItemAtPosition(,position)+"selected",Toast.LENGTH_LONG).show();
+                int CapBallScoreAVar = 10;
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                int CapBallScoreAVar = 0;
             }
         });
     }
