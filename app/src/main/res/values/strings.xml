@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FTCScoringApp</string>
+    <string name="CapBallSpinA">Choose Position</string>
+    <string-array name="CapBallAOptions">
+    <item>On Center Goal</item>
+    <item>On Floor</item>
+    </string-array>
+</resources>
+
