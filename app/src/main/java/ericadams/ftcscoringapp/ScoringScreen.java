@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemSelectedListener;
 
 public class ScoringScreen extends AppCompatActivity {
     Spinner CapBallSpinA;
@@ -20,9 +21,9 @@ public class ScoringScreen extends AppCompatActivity {
         CapBallAdapterAA = ArrayAdapter.createFromResource(this,R.array.CapBallAOptions,android.R.layout.simple_spinner_item);
         CapBallAdapterAA.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         CapBallSpinA.setAdapter(CapBallAdapterAA);
-        CapBallSpinA.setOnItemSelectedListener(new AdapterView() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        CapBallSpinA.setOnItemSelectedListener(new AdapterView.onItemSelectedListener(this) {
+
+            public void OnItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getBaseContext(), parent.getItemAtPosition(position)+"selected",Toast.LENGTH_LONG);
 
             }

@@ -34,14 +34,6 @@
         android:layout_alignParentEnd="true"
         android:text="15" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/CapBallLabelA"
-        android:layout_toEndOf="@+id/CapBallLabelA" />
-
     <TextView
         android:text="Autonomous Score"
         android:layout_width="wrap_content"
@@ -64,6 +56,26 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="13dp" />
+    <TextView
+        android:text="on the base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CapBallSpinA"
+        tools:textColor="@android:color/black"
+        android:textSize="20sp"/>
+    /* android:layout_below="@+id/AutoLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"*/
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/CapBallSpinA"
+        android:layout_toEndOf="@+id/CapBallSpinA" />
+
 
 
 </RelativeLayout>
