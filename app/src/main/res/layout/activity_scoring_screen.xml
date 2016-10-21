@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ericadams.ftcscoringapp.ScoringScreen">
-
+// Above is layout stuff-I haven't done anything with it
     <TextView
         android:text="0"
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
         android:layout_marginEnd="18dp"
         android:id="@+id/AutoScore"
         android:textSize="24sp"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@color/colorPrimaryDark" />//Autonomous score variable caled "AutoScore"
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
         android:text="0"
         android:layout_below="@+id/AutoScore"
         android:layout_toLeftOf="@+id/AutoScore"
-        android:layout_toStartOf="@+id/AutoScore" />
+        android:layout_toStartOf="@+id/AutoScore" />// Cap ball score variable called "CapBallScoreA"
 
     <TextView
         android:text="Autonomous Score"
@@ -43,7 +43,7 @@
         android:textColor="@color/colorPrimaryDark"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true" />// Autonomous Label displays "Autonomous Score"
 
     <TextView
         android:text=" Cap Ball Is"
@@ -54,7 +54,7 @@
         android:textSize="20sp"
         android:layout_below="@+id/AutoLabel"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true" />// Cap ball label displays "Cap Ball Is"
 
     <Spinner
         android:text="on the base"
@@ -66,7 +66,8 @@
         android:textAlignment="center"
         android:layout_below="@+id/AutoLabel"
         android:layout_toRightOf="@+id/CapBallLabelA"
-        android:layout_toEndOf="@+id/CapBallLabelA" />
+        android:layout_toEndOf="@+id/CapBallLabelA" /> // Spinner for the cap ball in autonomous displays "on the base" as default, changes to "on floor"
+
 
 
 </RelativeLayout>
