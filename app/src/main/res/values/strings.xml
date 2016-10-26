@@ -1,10 +1,21 @@
 <resources>
     <string name="app_name">FTCScoringApp</string>
     <string name="CapBallSpinA">Choose Position</string>
-    <integer name="CapBallAVar">0</integer>
+    <string name="BeaconSpinA">Choose Position</string>
     <string-array name="CapBallAOptions">
         <item>On Center Goal</item>
         <item>On Floor</item>
+    </string-array>
+    <string-array name="BeaconAOptions">
+        <item>0 Beacons</item>
+        <item>1 Beacon</item>
+        <item>2 Beacons</item>
+    </string-array>
+    <string-array name="ParkedOptions">
+        <item>Half Center</item>
+        <item>Full Center</item>
+        <item>Half Corner</item>
+        <item>Full Corner</item>
     </string-array>
 </resources>
 
