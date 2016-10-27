@@ -12,6 +12,7 @@
         <item>2 Beacons</item>
     </string-array>
     <string-array name="ParkedOptions">
+        <item>Not Parked</item>
         <item>Half Center</item>
         <item>Full Center</item>
         <item>Half Corner</item>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_scoring_screen"
@@ -9,14 +10,12 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ericadams.ftcscoringapp.ScoringScreen">
-    // Above is layout stuff-I haven't done anything with it
-    //Autonomous score variable caled "AutoScore"
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/CapBallScoreA"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:textColor="@android:color/black"
         android:text="0"
         android:layout_below="@+id/AutoScore"
@@ -44,10 +43,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView"
         tools:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:layout_below="@+id/AutoLabel"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black" />
 
     <Spinner
         android:text="on the base"
@@ -55,25 +55,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/CapBallSpinA"
         tools:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:textAlignment="center"
         android:layout_below="@+id/AutoLabel"
         android:layout_toLeftOf="@+id/CapBallScoreA"
         android:layout_toRightOf="@+id/textView"
         android:layout_toEndOf="@+id/textView" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/BeaconScoreA"
-        android:textSize="20sp"
-        android:textColor="@android:color/black"
-        android:text="0"
-        android:layout_below="@+id/CapBallScoreA"
-        android:layout_toLeftOf="@+id/AutoScore"
-        android:layout_toStartOf="@+id/AutoScore" />
-    // Spinner for the cap ball in autonomous displays "on the base" as default, changes to "on
-    floor"
 
     <Spinner
         android:text="0 Beacons"
@@ -81,7 +68,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/BeaconSpinnerA"
         tools:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:textAlignment="center"
         android:layout_alignTop="@+id/BeaconLabelA"
         android:layout_toRightOf="@+id/BeaconLabelA" />
@@ -97,50 +84,111 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/BeaconLabelA"
-        tools:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:text=" Beacons Triggered:"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ParkedScoreA"
-        android:textSize="20sp"
-        android:textColor="@android:color/black"
-        android:text="0"
-        android:layout_below="@+id/BeaconScoreA"
-        android:layout_alignLeft="@+id/BeaconScoreA"
-        android:layout_alignStart="@+id/BeaconScoreA" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ParkedLabelA"
-        tools:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:text=" Robot Parked:"
-        android:layout_below="@+id/BeaconLabelA"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <Spinner
         android:text="Not Parked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ParkedSpinnerA"
         tools:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:textAlignment="center"
-        android:layout_below="@+id/BeaconSpinnerA"
+        android:layout_alignTop="@+id/ParkedLabelA"
         android:layout_toRightOf="@+id/BeaconLabelA"
         android:layout_toEndOf="@+id/BeaconLabelA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ParkedLabelA"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text=" Robot Parked:"
+        android:layout_below="@+id/BeaconLabelA"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BeaconLabelA"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text=" Beacons Triggered:"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BeaconScoreA"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_above="@+id/CenterLabelA"
+        android:layout_toLeftOf="@+id/AutoScore"
+        android:layout_toStartOf="@+id/AutoScore"
+        android:layout_marginBottom="23dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ParkedScoreA"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_below="@+id/BeaconSpinnerA"
+        android:layout_alignLeft="@+id/BeaconScoreA"
+        android:layout_alignStart="@+id/BeaconScoreA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CenterScoreA"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/CenterAMinus"
+        android:layout_toStartOf="@+id/CenterAMinus" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CenterLabelA"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text=" Balls In Center Goal:"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/ParkedSpinnerA"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="+"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/CenterAPlus"
+        android:layout_above="@+id/CenterScoreA"
+        android:layout_toRightOf="@+id/CenterScoreA"
+        android:layout_toEndOf="@+id/CenterScoreA"
+        android:layout_marginBottom="19dp" />
+
+    <Button
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="-"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/CenterAMinus"
+        android:layout_alignTop="@+id/CenterScoreA"
+        android:layout_toRightOf="@+id/ParkedSpinnerA"
+        android:layout_marginLeft="14dp"/>
+
 
 
 </RelativeLayout>
