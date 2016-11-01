@@ -173,22 +173,25 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/CenterAPlus"
-        android:layout_above="@+id/CenterScoreA"
-        android:layout_toRightOf="@+id/CenterScoreA"
-        android:layout_toEndOf="@+id/CenterScoreA"
-        android:layout_marginBottom="19dp" />
+        android:layout_below="@+id/ParkedSpinnerA"
+        android:layout_toRightOf="@+id/CenterLabelA"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_alignRight="@+id/ParkedSpinnerA"
+        android:layout_alignEnd="@+id/ParkedSpinnerA" />
 
     <Button
         android:minHeight="0dp"
         android:minWidth="0dp"
         android:text="-"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:id="@+id/CenterAMinus"
-        android:layout_alignTop="@+id/CenterScoreA"
-        android:layout_toRightOf="@+id/ParkedSpinnerA"
-        android:layout_marginLeft="14dp"/>
-
+        android:layout_below="@+id/BeaconScoreA"
+        android:layout_toRightOf="@+id/AutoLabel"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
+        android:layout_alignBottom="@+id/CenterAPlus" />
 
 
 </RelativeLayout>
