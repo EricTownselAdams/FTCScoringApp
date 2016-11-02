@@ -99,42 +99,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ParkedLabelA"
-        tools:textColor="@android:color/black"
-        android:textSize="14sp"
-        android:text=" Robot Parked:"
-        android:layout_below="@+id/BeaconLabelA"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@android:color/black" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/BeaconLabelA"
-        tools:textColor="@android:color/black"
-        android:textSize="14sp"
-        android:text=" Beacons Triggered:"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@android:color/black" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/BeaconScoreA"
-        android:textSize="14sp"
-        android:textColor="@android:color/black"
-        android:text="0"
-        android:layout_above="@+id/CenterLabelA"
-        android:layout_toLeftOf="@+id/AutoScore"
-        android:layout_toStartOf="@+id/AutoScore"
-        android:layout_marginBottom="23dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/ParkedScoreA"
         android:textSize="14sp"
         android:textColor="@android:color/black"
@@ -147,12 +111,61 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/CenterScoreA"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:textColor="@android:color/black"
         android:text="0"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/CenterAMinus"
-        android:layout_toStartOf="@+id/CenterAMinus" />
+        android:layout_alignTop="@+id/CenterLabelA"
+        android:layout_alignLeft="@+id/ParkedScoreA"
+        android:layout_alignStart="@+id/ParkedScoreA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ParkedLabelA"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text=" Robot Parked:"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/BeaconSpinnerA"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BeaconLabelA"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text=" Beacons Triggered:"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/CapBallSpinA"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BeaconScoreA"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_alignTop="@+id/BeaconSpinnerA"
+        android:layout_toLeftOf="@+id/AutoScore"
+        android:layout_toStartOf="@+id/AutoScore" />
+
+    <Button
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="+"
+        android:id="@+id/CenterAPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/CenterScoreA"
+        android:layout_alignBottom="@+id/CenterScoreA"
+        android:layout_toRightOf="@+id/CenterBallCountA"
+        android:layout_toEndOf="@+id/CenterBallCountA"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -169,29 +182,26 @@
     <Button
         android:minHeight="0dp"
         android:minWidth="0dp"
-        android:text="+"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:id="@+id/CenterAPlus"
-        android:layout_below="@+id/ParkedSpinnerA"
-        android:layout_toRightOf="@+id/CenterLabelA"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_alignRight="@+id/ParkedSpinnerA"
-        android:layout_alignEnd="@+id/ParkedSpinnerA" />
-
-    <Button
-        android:minHeight="0dp"
-        android:minWidth="0dp"
         android:text="-"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
         android:id="@+id/CenterAMinus"
-        android:layout_below="@+id/BeaconScoreA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/CenterLabelA"
+        android:layout_alignBottom="@+id/CenterLabelA"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CenterBallCountA"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:layout_below="@+id/ParkedSpinnerA"
         android:layout_toRightOf="@+id/AutoLabel"
-        android:layout_marginLeft="39dp"
-        android:layout_marginStart="39dp"
-        android:layout_alignBottom="@+id/CenterAPlus" />
+        android:layout_toEndOf="@+id/AutoLabel" />
 
 
 </RelativeLayout>
