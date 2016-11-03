@@ -162,8 +162,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/CenterScoreA"
         android:layout_alignBottom="@+id/CenterScoreA"
-        android:layout_toRightOf="@+id/CenterBallCountA"
-        android:layout_toEndOf="@+id/CenterBallCountA"
+        android:layout_toRightOf="@+id/CenterBallCountLabelA"
+        android:layout_toEndOf="@+id/CenterBallCountLabelA"
         android:layout_marginLeft="30dp"
         android:layout_marginStart="30dp" />
 
@@ -188,17 +188,16 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/CenterLabelA"
         android:layout_alignBottom="@+id/CenterLabelA"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="buttonOnClick" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CenterBallCountA"
+        android:id="@+id/CenterBallCountLabelA"
         android:textSize="20sp"
         android:textColor="@android:color/black"
         android:text="0"
-        android:layout_marginLeft="21dp"
-        android:layout_marginStart="21dp"
         android:layout_below="@+id/ParkedSpinnerA"
         android:layout_toRightOf="@+id/AutoLabel"
         android:layout_toEndOf="@+id/AutoLabel" />

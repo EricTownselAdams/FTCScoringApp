@@ -6,10 +6,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
+
+
+//CenterBallCountA = CenterBallCountA-1;
 
 
 public class ScoringScreen extends AppCompatActivity  {
@@ -19,6 +22,9 @@ public class ScoringScreen extends AppCompatActivity  {
     ArrayAdapter<CharSequence> BeaconAdapterA;
     Spinner ParkedSpinnerA;
     ArrayAdapter<CharSequence> ParkedAdapterA;
+    Button CenterAMinus;
+    int CenterBallCountA;
+    Button CenterAPlus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +46,13 @@ public class ScoringScreen extends AppCompatActivity  {
         ParkedAdapterA.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ParkedSpinnerA.setAdapter(ParkedAdapterA);
 
+        CenterAMinus = (Button)findViewById(R.id.CenterAMinus);
+        CenterAPlus = (Button)findViewById(R.id.CenterAPlus);
+
+
         CapBallSpinnerA.setOnItemSelectedListener(new OnItemSelectedListener() {
-            final TextView CapBallScoreA = (TextView) findViewById(R.id.CapBallScoreA);
+            TextView CapBallScoreA = (TextView) findViewById(R.id.CapBallScoreA);
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("thing",CapBallSpinnerA.getSelectedItem().toString());
@@ -61,7 +72,7 @@ public class ScoringScreen extends AppCompatActivity  {
 
 
         BeaconSpinnerA.setOnItemSelectedListener(new OnItemSelectedListener() {
-            final TextView BeaconScoreA = (TextView) findViewById(R.id.BeaconScoreA);
+            TextView BeaconScoreA = (TextView) findViewById(R.id.BeaconScoreA);
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("thing",BeaconSpinnerA.getSelectedItem().toString());
@@ -81,7 +92,7 @@ public class ScoringScreen extends AppCompatActivity  {
         });
 
         ParkedSpinnerA.setOnItemSelectedListener(new OnItemSelectedListener() {
-            final TextView ParkedScoreA  = (TextView) findViewById(R.id.ParkedScoreA);
+            TextView ParkedScoreA  = (TextView) findViewById(R.id.ParkedScoreA);
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("thing",ParkedSpinnerA .getSelectedItem().toString());
@@ -106,7 +117,36 @@ public class ScoringScreen extends AppCompatActivity  {
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+
+        CenterAMinus.setOnClickListener(new View.OnClickListener(){
+            TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
+            TextView CenterBallCountLabel = (TextView) findViewById(R.id.CenterBallCountLabelA);
+            public void onClick(View v){
+                CenterBallCountA = CenterBallCountA - 1;
+
+                CenterScoreA.setText(Integer.toString(CenterBallCountA*5));
+                CenterBallCountLabel.setText(Integer.toString(CenterBallCountA));
+            }
+        });
+        CenterAPlus.setOnClickListener(new View.OnClickListener(){
+            TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
+            TextView CenterBallCountLabel = (TextView) findViewById(R.id.CenterBallCountLabelA);
+
+            public void onClick(View v){
+                CenterBallCountA = CenterBallCountA + 1;
+
+                CenterScoreA.setText(Integer.toString(CenterBallCountA*5));
+                CenterBallCountLabel.setText(Integer.toString(CenterBallCountA));
+
+            }
+        });
+
+
     }
+
+
+
+
 }
 /*
  CHANGE = (Spinner)findViewById(CHANGE);//Here --------------------------
