@@ -153,20 +153,6 @@
         android:layout_toLeftOf="@+id/AutoScore"
         android:layout_toStartOf="@+id/AutoScore" />
 
-    <Button
-        android:minHeight="0dp"
-        android:minWidth="0dp"
-        android:text="+"
-        android:id="@+id/CenterAPlus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/CenterScoreA"
-        android:layout_alignBottom="@+id/CenterScoreA"
-        android:layout_toRightOf="@+id/CenterBallCountLabelA"
-        android:layout_toEndOf="@+id/CenterBallCountLabelA"
-        android:layout_marginLeft="30dp"
-        android:layout_marginStart="30dp" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -201,6 +187,80 @@
         android:layout_below="@+id/ParkedSpinnerA"
         android:layout_toRightOf="@+id/AutoLabel"
         android:layout_toEndOf="@+id/AutoLabel" />
+
+    <Button
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="-"
+        android:id="@+id/CornerAMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonOnClick"
+        android:layout_below="@+id/CenterAMinus"
+        android:layout_alignLeft="@+id/CenterAMinus"
+        android:layout_alignStart="@+id/CenterAMinus" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CornerBallCountLabelA"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_alignBottom="@+id/CornerAMinus"
+        android:layout_toLeftOf="@+id/CenterAPlus"
+        android:layout_toStartOf="@+id/CenterAPlus" />
+
+    <Button
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="+"
+        android:id="@+id/CornerAPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CenterAPlus"
+        android:layout_alignLeft="@+id/CenterAPlus"
+        android:layout_alignStart="@+id/CenterAPlus"
+        android:onClick="buttonOnClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CornerLabelA"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text="Balls In Corner Goal:"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/CornerAMinus"
+        android:layout_alignBottom="@+id/CornerAMinus"
+        android:layout_alignRight="@+id/CenterLabelA"
+        android:layout_alignEnd="@+id/CenterLabelA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CornerScoreA"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_alignBaseline="@+id/CornerAPlus"
+        android:layout_alignBottom="@+id/CornerAPlus"
+        android:layout_alignLeft="@+id/CenterScoreA"
+        android:layout_alignStart="@+id/CenterScoreA" />
+
+    <Button
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="+"
+        android:id="@+id/CenterAPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_alignBaseline="@+id/CenterScoreA"
+        android:layout_alignBottom="@+id/CenterScoreA"
+        android:layout_toRightOf="@+id/CenterBallCountLabelA"
+        android:layout_toEndOf="@+id/CenterBallCountLabelA" />
 
 
 </RelativeLayout>

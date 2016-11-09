@@ -16,15 +16,31 @@ import android.widget.AdapterView.OnItemSelectedListener;
 
 
 public class ScoringScreen extends AppCompatActivity  {
+
     Spinner CapBallSpinnerA;
     ArrayAdapter<CharSequence> CapBallAdapterAA;
+
     Spinner BeaconSpinnerA;
     ArrayAdapter<CharSequence> BeaconAdapterA;
+
     Spinner ParkedSpinnerA;
     ArrayAdapter<CharSequence> ParkedAdapterA;
+
+    Button CenterAPlus;
     Button CenterAMinus;
     int CenterBallCountA;
-    Button CenterAPlus;
+
+    Button CornerAPlus;
+    Button CornerAMinus;
+    int CornerBallCount;
+
+    int TotalScore = 0;
+    int BeaconScore = 0;
+    int ParkedScore = 0;
+    int CornerScore = 0;
+    int CenterScore = 0;
+    int CapballScore = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +65,18 @@ public class ScoringScreen extends AppCompatActivity  {
         CenterAMinus = (Button)findViewById(R.id.CenterAMinus);
         CenterAPlus = (Button)findViewById(R.id.CenterAPlus);
 
+        CornerAMinus = (Button)findViewById(R.id.CornerAMinus);
+        CornerAPlus = (Button)findViewById(R.id.CornerAPlus);
+
 
         CapBallSpinnerA.setOnItemSelectedListener(new OnItemSelectedListener() {
+            TextView AutoScore = (TextView) findViewById(R.id.AutoScore);
             TextView CapBallScoreA = (TextView) findViewById(R.id.CapBallScoreA);
+            TextView CornerScoreA = (TextView) findViewById(R.id.CornerScoreA);
+            TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
+            TextView ParkedScoreA  = (TextView) findViewById(R.id.ParkedScoreA);
+            TextView BeaconScoreA = (TextView) findViewById(R.id.BeaconScoreA);
+
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -63,6 +88,9 @@ public class ScoringScreen extends AppCompatActivity  {
                     CapBallScoreA.setText("0");
                     //txtValue.setText(Integer.toString(0));
                 }
+
+                TotalScore = (CornerScore+CenterScore+BeaconScore+ParkedScore+CapballScore);
+                AutoScore.setText(Integer.toString(TotalScore));
             }
 
             @Override
@@ -72,18 +100,29 @@ public class ScoringScreen extends AppCompatActivity  {
 
 
         BeaconSpinnerA.setOnItemSelectedListener(new OnItemSelectedListener() {
+            TextView AutoScore = (TextView) findViewById(R.id.AutoScore);
+            TextView CapBallScoreA = (TextView) findViewById(R.id.CapBallScoreA);
+            TextView CornerScoreA = (TextView) findViewById(R.id.CornerScoreA);
+            TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
+            TextView ParkedScoreA  = (TextView) findViewById(R.id.ParkedScoreA);
             TextView BeaconScoreA = (TextView) findViewById(R.id.BeaconScoreA);
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("thing",BeaconSpinnerA.getSelectedItem().toString());
 
                 if (BeaconSpinnerA.getSelectedItem().toString().equals("1 Beacon")){
-                    BeaconScoreA.setText("30");
+                    BeaconScore = 30;
                 } else if(BeaconSpinnerA.getSelectedItem().toString().equals("2 Beacons")){
-                    BeaconScoreA.setText("60");
+                    BeaconScore = 60;
                 } else if(BeaconSpinnerA.getSelectedItem().toString().equals("0 Beacons")){
-                    BeaconScoreA.setText("0");
+                    BeaconScore = 0;
                 }
+               // BeaconScoreA.setText(Integer.toString(BeaconScore));
+
+                TotalScore = (CornerScore+CenterScore+BeaconScore+ParkedScore+CapballScore);
+
+                AutoScore.setText(Integer.toString(TotalScore));
             }
 
             @Override
@@ -92,25 +131,38 @@ public class ScoringScreen extends AppCompatActivity  {
         });
 
         ParkedSpinnerA.setOnItemSelectedListener(new OnItemSelectedListener() {
+            TextView AutoScore = (TextView) findViewById(R.id.AutoScore);
+            TextView CapBallScoreA = (TextView) findViewById(R.id.CapBallScoreA);
+            TextView CornerScoreA = (TextView) findViewById(R.id.CornerScoreA);
+            TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
             TextView ParkedScoreA  = (TextView) findViewById(R.id.ParkedScoreA);
+            TextView BeaconScoreA = (TextView) findViewById(R.id.BeaconScoreA);
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("thing",ParkedSpinnerA .getSelectedItem().toString());
 
                 if (ParkedSpinnerA.getSelectedItem().toString().equals("Half Center")){
-                    ParkedScoreA.setText("5");
+                    ParkedScoreA.setText(ParkedScore);
                 } else if(ParkedSpinnerA.getSelectedItem().toString().equals("Full Center")){
-                    ParkedScoreA.setText("10");
+                    ParkedScore = 10;
+                    ParkedScoreA.setText(ParkedScore);
                     //txtValue.setText(Integer.toString(0));
                 } else if(ParkedSpinnerA.getSelectedItem().toString().equals("Half Corner")){
-                    ParkedScoreA.setText("5");
+                    ParkedScore = 5;
+                    ParkedScoreA.setText(ParkedScore);
                     //txtValue.setText(Integer.toString(0));
                 } else if(ParkedSpinnerA.getSelectedItem().toString().equals("Full Corner")){
-                    ParkedScoreA.setText("10");
+                    ParkedScore = 10;
+                    ParkedScoreA.setText(ParkedScore);
                     //txtValue.setText(Integer.toString(0));
                 } else if(ParkedSpinnerA.getSelectedItem().toString().equals("Not Parked")){
-                    ParkedScoreA.setText("0");
+                    ParkedScore = 0;
+                    ParkedScoreA.setText(ParkedScore);
                 }
+
+                TotalScore += (ParkedScore);
+                AutoScore.setText(Integer.toString(TotalScore));
             }
 
             @Override
@@ -119,24 +171,88 @@ public class ScoringScreen extends AppCompatActivity  {
         });
 
         CenterAMinus.setOnClickListener(new View.OnClickListener(){
-            TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
             TextView CenterBallCountLabel = (TextView) findViewById(R.id.CenterBallCountLabelA);
+            TextView AutoScore = (TextView) findViewById(R.id.AutoScore);
+            TextView CapBallScoreA = (TextView) findViewById(R.id.CapBallScoreA);
+            TextView CornerScoreA = (TextView) findViewById(R.id.CornerScoreA);
+            TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
+            TextView ParkedScoreA  = (TextView) findViewById(R.id.ParkedScoreA);
+            TextView BeaconScoreA = (TextView) findViewById(R.id.BeaconScoreA);
+
             public void onClick(View v){
                 CenterBallCountA = CenterBallCountA - 1;
 
-                CenterScoreA.setText(Integer.toString(CenterBallCountA*5));
+                CenterScoreA.setText(Integer.toString(CenterBallCountA*15));
                 CenterBallCountLabel.setText(Integer.toString(CenterBallCountA));
+
+
+                CenterScore += (CenterBallCountA*15);
+                TotalScore += (CenterScore);
+                AutoScore.setText(Integer.toString(TotalScore));
             }
         });
         CenterAPlus.setOnClickListener(new View.OnClickListener(){
-            TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
             TextView CenterBallCountLabel = (TextView) findViewById(R.id.CenterBallCountLabelA);
+            TextView AutoScore = (TextView) findViewById(R.id.AutoScore);
+            TextView CapBallScoreA = (TextView) findViewById(R.id.CapBallScoreA);
+            TextView CornerScoreA = (TextView) findViewById(R.id.CornerScoreA);
+            TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
+            TextView ParkedScoreA  = (TextView) findViewById(R.id.ParkedScoreA);
+            TextView BeaconScoreA = (TextView) findViewById(R.id.BeaconScoreA);
+
 
             public void onClick(View v){
                 CenterBallCountA = CenterBallCountA + 1;
 
-                CenterScoreA.setText(Integer.toString(CenterBallCountA*5));
+                CenterScoreA.setText(Integer.toString(CenterBallCountA*15));
                 CenterBallCountLabel.setText(Integer.toString(CenterBallCountA));
+
+                TotalScore += (CornerBallCount*5);
+                AutoScore.setText(Integer.toString(TotalScore));
+
+            }
+        });
+
+        CornerAMinus.setOnClickListener(new View.OnClickListener(){
+            TextView CornerBallCountA = (TextView) findViewById(R.id.CornerBallCountLabelA);
+            TextView AutoScore = (TextView) findViewById(R.id.AutoScore);
+            TextView CapBallScoreA = (TextView) findViewById(R.id.CapBallScoreA);
+            TextView CornerScoreA = (TextView) findViewById(R.id.CornerScoreA);
+            TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
+            TextView ParkedScoreA  = (TextView) findViewById(R.id.ParkedScoreA);
+            TextView BeaconScoreA = (TextView) findViewById(R.id.BeaconScoreA);
+
+            public void onClick(View v){
+                CornerBallCount = CornerBallCount - 1;
+
+                CornerScoreA.setText(Integer.toString(CornerBallCount*5));
+                CornerBallCountA.setText(Integer.toString(CornerBallCount));
+
+                TotalScore += (CornerBallCount*5);
+                AutoScore.setText(Integer.toString(TotalScore));
+            }
+        });
+        CornerAPlus.setOnClickListener(new View.OnClickListener(){
+            TextView CornerBallCountLabel = (TextView) findViewById(R.id.CornerBallCountLabelA);
+            TextView AutoScore = (TextView) findViewById(R.id.AutoScore);
+            TextView CapBallScoreA = (TextView) findViewById(R.id.CapBallScoreA);
+            TextView CornerScoreA = (TextView) findViewById(R.id.CornerScoreA);
+            TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
+            TextView ParkedScoreA  = (TextView) findViewById(R.id.ParkedScoreA);
+            TextView BeaconScoreA = (TextView) findViewById(R.id.BeaconScoreA);
+
+
+
+
+
+            public void onClick(View v){
+                CornerBallCount = CornerBallCount + 1;
+
+                CornerScoreA.setText(Integer.toString(CornerBallCount*5));
+                CornerBallCountLabel.setText(Integer.toString(CornerBallCount));
+
+                TotalScore += (CornerBallCount*5);
+                AutoScore.setText(Integer.toString(TotalScore));
 
             }
         });
