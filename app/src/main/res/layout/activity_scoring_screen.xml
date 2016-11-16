@@ -11,29 +11,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ericadams.ftcscoringapp.ScoringScreen">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/CapBallScoreA"
-        android:textSize="14sp"
-        android:textColor="@android:color/black"
-        android:text="0"
-        android:layout_below="@+id/AutoScore"
-        android:layout_toLeftOf="@+id/AutoScore"
-        android:layout_alignLeft="@+id/BeaconScoreA"
-        android:layout_alignStart="@+id/BeaconScoreA" />// Cap ball score variable called
+    // Cap ball score variable called
     "CapBallScoreA"
 
-    <TextView
-        android:text="Autonomous Score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/AutoLabel"
-        android:textSize="24sp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />// Autonomous Label displays "Autonomous Score"
+    // Autonomous Label displays "Autonomous Score"
 
     // Cap ball label displays "Cap Ball Is"
 
@@ -41,60 +22,13 @@
         android:text=" Cap Ball is:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        android:id="@+id/CapBallLabelA"
         tools:textColor="@android:color/black"
         android:textSize="14sp"
         android:layout_below="@+id/AutoLabel"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="@android:color/black" />
-
-    <Spinner
-        android:text="on the base"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/CapBallSpinA"
-        tools:textColor="@android:color/black"
-        android:textSize="14sp"
-        android:textAlignment="center"
-        android:layout_below="@+id/AutoLabel"
-        android:layout_toLeftOf="@+id/CapBallScoreA"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView" />
-
-    <Spinner
-        android:text="0 Beacons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/BeaconSpinnerA"
-        tools:textColor="@android:color/black"
-        android:textSize="14sp"
-        android:textAlignment="center"
-        android:layout_alignTop="@+id/BeaconLabelA"
-        android:layout_toRightOf="@+id/BeaconLabelA" />
-
-    <TextView
-        android:text="0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/AutoScore"
-        android:textSize="24sp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Spinner
-        android:text="Not Parked"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ParkedSpinnerA"
-        tools:textColor="@android:color/black"
-        android:textSize="14sp"
-        android:textAlignment="center"
-        android:layout_alignTop="@+id/ParkedLabelA"
-        android:layout_toRightOf="@+id/BeaconLabelA"
-        android:layout_toEndOf="@+id/BeaconLabelA" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -156,72 +90,95 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CenterLabelA"
+        android:id="@+id/CornerScoreA"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_alignBaseline="@+id/CornerPlusA"
+        android:layout_alignBottom="@+id/CornerPlusA"
+        android:layout_alignLeft="@+id/CenterScoreA"
+        android:layout_alignStart="@+id/CenterScoreA" />
+
+    <TextView
+        android:text="Autonomous Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AutoLabel"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AutoScore"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CenterGoalLabelD"
         tools:textColor="@android:color/black"
         android:textSize="14sp"
         android:text=" Balls In Center Goal:"
         android:textColor="@android:color/black"
-        android:layout_below="@+id/ParkedSpinnerA"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:minHeight="0dp"
-        android:minWidth="0dp"
-        android:text="-"
-        android:id="@+id/CenterAMinus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/CenterLabelA"
-        android:layout_alignBottom="@+id/CenterLabelA"
-        android:layout_centerHorizontal="true"
-        android:onClick="buttonOnClick" />
+        android:layout_alignBaseline="@+id/CenterMinusD"
+        android:layout_alignBottom="@+id/CenterMinusD"
+        android:layout_alignLeft="@+id/DriverLabel"
+        android:layout_alignStart="@+id/DriverLabel" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CenterBallCountLabelA"
-        android:textSize="20sp"
+        android:id="@+id/CenterScoreD"
+        android:textSize="14sp"
         android:textColor="@android:color/black"
         android:text="0"
-        android:layout_below="@+id/ParkedSpinnerA"
-        android:layout_toRightOf="@+id/AutoLabel"
-        android:layout_toEndOf="@+id/AutoLabel" />
-
-    <Button
-        android:minHeight="0dp"
-        android:minWidth="0dp"
-        android:text="-"
-        android:id="@+id/CornerAMinus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="buttonOnClick"
-        android:layout_below="@+id/CenterAMinus"
-        android:layout_alignLeft="@+id/CenterAMinus"
-        android:layout_alignStart="@+id/CenterAMinus" />
+        android:layout_alignBottom="@+id/CenterCountLabelD"
+        android:layout_toLeftOf="@+id/CornerScoreA"
+        android:layout_toStartOf="@+id/CornerScoreA" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CornerBallCountLabelA"
-        android:textSize="20sp"
+        android:id="@+id/CornerScoreD"
+        android:textSize="14sp"
         android:textColor="@android:color/black"
         android:text="0"
-        android:layout_alignBottom="@+id/CornerAMinus"
-        android:layout_toLeftOf="@+id/CenterAPlus"
-        android:layout_toStartOf="@+id/CenterAPlus" />
+        android:layout_alignBaseline="@+id/CornerPlusD"
+        android:layout_alignBottom="@+id/CornerPlusD"
+        android:layout_alignLeft="@+id/CenterScoreD"
+        android:layout_alignStart="@+id/CenterScoreD" />
 
-    <Button
-        android:minHeight="0dp"
-        android:minWidth="0dp"
-        android:text="+"
-        android:id="@+id/CornerAPlus"
+    <TextView
+        android:text="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/CenterAPlus"
-        android:layout_alignLeft="@+id/CenterAPlus"
-        android:layout_alignStart="@+id/CenterAPlus"
-        android:onClick="buttonOnClick" />
+        android:id="@+id/DriverScore"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_above="@+id/CenterPlusD"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:text="Not Parked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ParkedSpinnerA"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/BeaconSpinnerA"
+        android:layout_alignLeft="@+id/BeaconSpinnerA"
+        android:layout_alignStart="@+id/BeaconSpinnerA" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -231,36 +188,317 @@
         android:textSize="14sp"
         android:text="Balls In Corner Goal:"
         android:textColor="@android:color/black"
-        android:layout_alignBaseline="@+id/CornerAMinus"
-        android:layout_alignBottom="@+id/CornerAMinus"
+        android:layout_alignBaseline="@+id/CornerMinusA"
+        android:layout_alignBottom="@+id/CornerMinusA"
+        android:layout_toStartOf="@+id/ParkedSpinnerA"
         android:layout_alignRight="@+id/CenterLabelA"
         android:layout_alignEnd="@+id/CenterLabelA" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CornerScoreA"
-        android:textSize="14sp"
+        android:id="@+id/CenterCountLabelD"
+        android:textSize="20sp"
         android:textColor="@android:color/black"
         android:text="0"
-        android:layout_alignBaseline="@+id/CornerAPlus"
-        android:layout_alignBottom="@+id/CornerAPlus"
-        android:layout_alignLeft="@+id/CenterScoreA"
-        android:layout_alignStart="@+id/CenterScoreA" />
+        android:layout_alignBottom="@+id/CenterGoalLabelD"
+        android:layout_alignLeft="@+id/CornerCountLabelD"
+        android:layout_alignStart="@+id/CornerCountLabelD" />
+
+    <Button
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="-"
+        android:id="@+id/CenterMinusD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonOnClick"
+        android:layout_below="@+id/DriverLabel"
+        android:layout_alignLeft="@+id/CornerMinusA"
+        android:layout_alignStart="@+id/CornerMinusA" />
 
     <Button
         android:minHeight="0dp"
         android:minWidth="0dp"
         android:text="+"
-        android:id="@+id/CenterAPlus"
+        android:id="@+id/CenterPlusD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_alignBaseline="@+id/CenterScoreA"
-        android:layout_alignBottom="@+id/CenterScoreA"
-        android:layout_toRightOf="@+id/CenterBallCountLabelA"
-        android:layout_toEndOf="@+id/CenterBallCountLabelA" />
+        android:layout_below="@+id/DriverLabel"
+        android:layout_toRightOf="@+id/DriverLabel"
+        android:layout_toEndOf="@+id/DriverLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CornerLabelD"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text=" Balls In Corner Goal:"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/CornerMinusD"
+        android:layout_alignBottom="@+id/CornerMinusD"
+        android:layout_alignLeft="@+id/CenterGoalLabelD"
+        android:layout_alignStart="@+id/CenterGoalLabelD" />
+
+    <Button
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="-"
+        android:id="@+id/CornerMinusD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonOnClick"
+        android:layout_alignBaseline="@+id/CornerPlusD"
+        android:layout_alignBottom="@+id/CornerPlusD"
+        android:layout_toRightOf="@+id/CornerLabelD"
+        android:layout_toEndOf="@+id/CornerLabelD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CornerCountLabelD"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_alignBaseline="@+id/CornerMinusD"
+        android:layout_alignBottom="@+id/CornerMinusD"
+        android:layout_alignLeft="@+id/CornerCountLabelA"
+        android:layout_alignStart="@+id/CornerCountLabelA" />
+
+    <Button
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="+"
+        android:id="@+id/CornerPlusA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonOnClick"
+        android:layout_below="@+id/CenterMinusA"
+        android:layout_alignLeft="@+id/CenterPlusA"
+        android:layout_alignStart="@+id/CenterPlusA" />
+
+    <Button
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="-"
+        android:id="@+id/CornerMinusA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonOnClick"
+        android:layout_below="@+id/CenterMinusA"
+        android:layout_toRightOf="@+id/CenterGoalLabelD"
+        android:layout_toEndOf="@+id/CenterGoalLabelD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CornerCountLabelA"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_alignBaseline="@+id/CornerMinusA"
+        android:layout_alignBottom="@+id/CornerMinusA"
+        android:layout_alignRight="@+id/AutoLabel"
+        android:layout_alignEnd="@+id/AutoLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CenterLabelA"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text=" Balls In Center Goal:"
+        android:textColor="@android:color/black"
+        android:layout_alignBottom="@+id/CenterCountLabelA"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="-"
+        android:id="@+id/CenterMinusA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonOnClick"
+        android:layout_below="@+id/ParkedSpinnerA"
+        android:layout_alignLeft="@+id/CornerMinusA"
+        android:layout_alignStart="@+id/CornerMinusA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CenterCountLabelA"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_alignBaseline="@+id/CenterMinusA"
+        android:layout_alignBottom="@+id/CenterMinusA"
+        android:layout_alignLeft="@+id/CornerCountLabelA"
+        android:layout_alignStart="@+id/CornerCountLabelA" />
+
+    <Button
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="+"
+        android:id="@+id/CenterPlusA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/CornerPlusA"
+        android:layout_toRightOf="@+id/DriverLabel"
+        android:layout_toEndOf="@+id/DriverLabel" />
+
+    <Button
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="+"
+        android:id="@+id/CornerPlusD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CenterPlusD"
+        android:layout_alignLeft="@+id/CenterPlusD"
+        android:layout_alignStart="@+id/CenterPlusD"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:text="End Game Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/EndLabel"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/CornerMinusD"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Driver Controlled Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DriverLabel"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/CornerPlusA"
+        android:layout_alignLeft="@+id/CornerLabelA"
+        android:layout_alignStart="@+id/CornerLabelA" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/CornerPlusD"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:text="0 Beacons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BeaconSpinnerA"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/BeaconLabelA"
+        android:layout_toRightOf="@+id/BeaconLabelA"
+        android:layout_toEndOf="@+id/BeaconLabelA" />
+
+    <Spinner
+        android:text="0 Beacons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BeaconSpinnerE"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/EndLabel"
+        android:layout_alignRight="@+id/EndLabel"
+        android:layout_alignEnd="@+id/EndLabel" />
+
+    <TextView
+        android:text=" Cap Ball is:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CapBallLabelE"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/BeaconSpinnerE"
+        android:layout_alignLeft="@+id/BeaconLabelE"
+        android:layout_alignStart="@+id/BeaconLabelE" />
+
+    <Spinner
+        android:text="on the base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CapBallSpinA"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/AutoLabel"
+        android:layout_toRightOf="@+id/CapBallLabelA"
+        android:layout_toEndOf="@+id/CapBallLabelA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CapBallScoreA"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_below="@+id/AutoScore"
+        android:layout_toLeftOf="@+id/AutoScore"
+        android:layout_toStartOf="@+id/AutoScore" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CapBallScoreE"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_alignBottom="@+id/CapBallSpinnerE"
+        android:layout_alignLeft="@+id/BeaconScoreE"
+        android:layout_alignStart="@+id/BeaconScoreE" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BeaconScoreE"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_alignBottom="@+id/BeaconSpinnerE"
+        android:layout_alignLeft="@+id/CornerScoreD"
+        android:layout_alignStart="@+id/CornerScoreD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BeaconLabelE"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text=" Beacons Triggered:"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/EndLabel"
+        android:layout_alignRight="@+id/CornerLabelA"
+        android:layout_alignEnd="@+id/CornerLabelA" />
+
+    <Spinner
+        android:text="on the base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CapBallSpinnerE"
+        tools:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/CapBallLabelE"
+        android:layout_toRightOf="@+id/CapBallLabelE"
+        android:layout_toEndOf="@+id/CapBallLabelE" />
 
 
 </RelativeLayout>

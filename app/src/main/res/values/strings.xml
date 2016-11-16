@@ -2,15 +2,20 @@
     <string name="app_name">FTCScoringApp</string>
     <string name="CapBallSpinA">Choose Position</string>
     <string name="BeaconSpinA">Choose Position</string>
+    <string name="CapBallSpinE">Choose Position</string>
+    <String name="BeaconSpinE">Choose Position</String>
+
     <string-array name="CapBallAOptions">
         <item>On Center Goal</item>
         <item>On Floor</item>
     </string-array>
+
     <string-array name="BeaconAOptions">
         <item>0 Beacons</item>
         <item>1 Beacon</item>
         <item>2 Beacons</item>
     </string-array>
+
     <string-array name="ParkedOptions">
         <item>Not Parked</item>
         <item>Half Center</item>
@@ -18,5 +23,21 @@
         <item>Half Corner</item>
         <item>Full Corner</item>
     </string-array>
+
+
+    <string-array name="CapBallEOptions">
+        <item>Off Playingfield</item>
+        <item>Above 40"</item>
+        <item>Capped Center Vortex</item>
+    </string-array>
+
+    <string-array name="BeaconEOptions">
+        <item>0 Beacons</item>
+        <item>1 Beacon</item>
+        <item>2 Beacons</item>
+        <item>3 Beacons</item>
+        <item>4 Beacons</item>
+    </string-array>
+
 </resources>
 
