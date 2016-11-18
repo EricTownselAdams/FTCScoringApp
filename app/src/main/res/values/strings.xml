@@ -3,7 +3,7 @@
     <string name="CapBallSpinA">Choose Position</string>
     <string name="BeaconSpinA">Choose Position</string>
     <string name="CapBallSpinE">Choose Position</string>
-    <String name="BeaconSpinE">Choose Position</String>
+    <string name="BeaconSpinE">Choose Position</string>
 
     <string-array name="CapBallAOptions">
         <item>On Center Goal</item>
@@ -26,12 +26,13 @@
 
 
     <string-array name="CapBallEOptions">
-        <item>Off Playingfield</item>
+        <item>On Floor</item>
+        <item>Off Playing Field</item>
         <item>Above 40"</item>
-        <item>Capped Center Vortex</item>
+        <item>Capped Center Goal</item>
     </string-array>
 
-    <string-array name="BeaconEOptions">
+    <string-array name="BeaconOptionsE">
         <item>0 Beacons</item>
         <item>1 Beacon</item>
         <item>2 Beacons</item>
