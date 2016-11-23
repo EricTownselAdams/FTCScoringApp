@@ -111,18 +111,6 @@
         android:layout_alignLeft="@+id/DriverLabel"
         android:layout_alignStart="@+id/DriverLabel" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/CornerScoreD"
-        android:textSize="14sp"
-        android:textColor="@android:color/black"
-        android:text="0"
-        android:layout_alignBaseline="@+id/CornerPlusD"
-        android:layout_alignBottom="@+id/CornerPlusD"
-        android:layout_alignLeft="@+id/CenterScoreD"
-        android:layout_alignStart="@+id/CenterScoreD" />
-
     <Spinner
         android:text="Not Parked"
         android:layout_width="wrap_content"
@@ -378,17 +366,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CapBallScoreE"
-        android:textSize="14sp"
-        android:textColor="@android:color/black"
-        android:text="0"
-        android:layout_alignBottom="@+id/CapBallSpinnerE"
-        android:layout_alignLeft="@+id/BeaconScoreE"
-        android:layout_alignStart="@+id/BeaconScoreE" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/BeaconLabelE"
         tools:textColor="@android:color/black"
         android:textSize="14sp"
@@ -433,27 +410,6 @@
         android:layout_alignRight="@+id/CapBallScoreE"
         android:layout_alignEnd="@+id/CapBallScoreE" />
 
-    <Button
-        android:text="Reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:id="@+id/ResetButton"
-        android:layout_below="@+id/CapBallSpinnerE"
-        android:layout_alignLeft="@+id/CapBallLabelE"
-        android:layout_alignStart="@+id/CapBallLabelE" />
-
-    <TextView
-        android:text="Total Score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/TotalScoreLabel"
-        android:textSize="30sp"
-        android:textColor="@android:color/black"
-        android:layout_alignBottom="@+id/ResetButton"
-        android:layout_alignLeft="@+id/ParkedSpinnerA"
-        android:layout_alignStart="@+id/ParkedSpinnerA" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -464,52 +420,6 @@
         android:layout_alignTop="@+id/BeaconSpinnerA"
         android:layout_alignLeft="@+id/CapBallScoreA"
         android:layout_alignStart="@+id/CapBallScoreA" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/CapBallScoreA"
-        android:textSize="14sp"
-        android:textColor="@android:color/black"
-        android:text="0"
-        android:layout_below="@+id/AutoScore"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/CenterScoreD"
-        android:textSize="14sp"
-        android:textColor="@android:color/black"
-        android:text="0"
-        android:layout_below="@+id/DriverScore"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/BeaconScoreE"
-        android:textSize="14sp"
-        android:textColor="@android:color/black"
-        android:text="0"
-        android:layout_alignBottom="@+id/BeaconSpinnerE"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:text="0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/AutoScore"
-        android:textSize="24sp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/CenterPlusA"
-        android:layout_toEndOf="@+id/CenterPlusA"
-        android:layout_marginLeft="14dp"
-        android:layout_marginStart="14dp" />
 
     <TextView
         android:text="0"
@@ -532,6 +442,94 @@
         android:layout_below="@+id/CornerPlusD"
         android:layout_alignLeft="@+id/DriverScore"
         android:layout_alignStart="@+id/DriverScore" />
+
+    <TextView
+        android:text="Total Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TotalScoreLabel"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ResetButton"
+        android:layout_alignBottom="@+id/TotalScoreLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CapBallScoreA"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_below="@+id/AutoScore"
+        android:layout_alignLeft="@+id/CenterScoreD"
+        android:layout_alignStart="@+id/CenterScoreD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BeaconScoreE"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_alignBottom="@+id/BeaconSpinnerE"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CapBallScoreE"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_alignBottom="@+id/CapBallSpinnerE"
+        android:layout_alignLeft="@+id/BeaconScoreE"
+        android:layout_alignStart="@+id/BeaconScoreE" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CenterScoreD"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_below="@+id/DriverScore"
+        android:layout_alignLeft="@+id/BeaconScoreE"
+        android:layout_alignStart="@+id/BeaconScoreE" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CornerScoreD"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_alignBottom="@+id/CornerCountLabelD"
+        android:layout_alignLeft="@+id/CenterScoreD"
+        android:layout_alignStart="@+id/CenterScoreD" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AutoScore"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/CenterPlusA"
+        android:layout_toEndOf="@+id/CenterPlusA" />
 
 
 </RelativeLayout>
