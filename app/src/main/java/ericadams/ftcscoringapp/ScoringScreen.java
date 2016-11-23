@@ -11,6 +11,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemSelectedListener;
 
+import org.w3c.dom.Text;
+
 
 public class ScoringScreen extends AppCompatActivity  {
 
@@ -31,19 +33,21 @@ public class ScoringScreen extends AppCompatActivity  {
 
     Button CenterPlusA;
     Button CenterMinusA;
-    int CenterCountIntA;
     Button CornerPlusA;
     Button CornerMinusA;
-    int CornerCountIntA;
 
     Button CenterPlusD;
     Button CenterMinusD;
-    int CenterCountIntD;
     Button CornerPlusD;
     Button CornerMinusD;
+
+    Button ResetButton;
+
+    int CenterCountIntD;
     int CornerCountIntD;
 
-
+    int CornerCountIntA;
+    int CenterCountIntA;
     int AutoScoreIntA = 0;
     int BeaconScoreIntA = 0;
     int ParkedScoreIntA = 0;
@@ -95,6 +99,8 @@ public class ScoringScreen extends AppCompatActivity  {
         CornerMinusD = (Button)findViewById(R.id.CornerMinusD);
         CornerPlusD = (Button)findViewById(R.id.CornerPlusD);
 
+        ResetButton = (Button)findViewById(R.id.ResetButton);
+
 
 
         CapBallSpinnerE = (Spinner)findViewById(R.id.CapBallSpinnerE);
@@ -131,7 +137,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 AutoScoreIntA = 0;
                 AutoScoreIntA = (CornerScoreIntA+CenterScoreIntA+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 AutoScore.setText(Integer.toString(AutoScoreIntA));
-                TotalScore.setText(Integer.toString(CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA));
+                TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
             }
 
@@ -162,7 +168,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 AutoScoreIntA = 0;
                 AutoScoreIntA = (CornerScoreIntA+CenterScoreIntA+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 AutoScore.setText(Integer.toString(AutoScoreIntA));
-                TotalScore.setText(Integer.toString(CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA));
+                TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
             }
 
@@ -459,7 +465,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 }
                 EndScoreIntE = (CapballScoreIntE+BeaconScoreIntE);
                 EndScore.setText(Integer.toString(EndScoreIntE));
-                TotalScore.setText(Integer.toString(CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA));
+                TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
             }
 
@@ -469,12 +475,85 @@ public class ScoringScreen extends AppCompatActivity  {
         });
         // End of End Game
 
+        ResetButton.setOnClickListener(new View.OnClickListener(){
+
+            TextView CapBallLabelA = (TextView) findViewById(R.id.CapBallLabelA);
+
+            TextView CornerScoreA = (TextView) findViewById(R.id.CornerScoreA);
+            TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
+            TextView CornerCountLabelA = (TextView) findViewById(R.id.CornerCountLabelA);
+            TextView CenterCountLabelA = (TextView) findViewById(R.id.CenterCountLabelA);
+
+            TextView CenterScoreD = (TextView) findViewById(R.id.CenterScoreD);
+            TextView CornerScoreD = (TextView) findViewById(R.id.CornerScoreD);
+            TextView CornerCountLabelD = (TextView) findViewById(R.id.CornerCountLabelD);
+            TextView CenterCountLabelD = (TextView) findViewById(R.id.CenterCountLabelD);
+
+            TextView AutoScore = (TextView) findViewById(R.id.AutoScore);
+            TextView DriverScore = (TextView) findViewById(R.id.DriverScore);
+            TextView EndScore = (TextView) findViewById(R.id.EndScore);
+            TextView TotalScore = (TextView) findViewById(R.id.TotalScore);
+
+            public void onClick(View v){
+                CapBallSpinnerA.setSelection(0);
+                BeaconSpinnerA.setSelection(0);
+                ParkedSpinnerA.setSelection(0);
+                BeaconSpinnerE.setSelection(0);
+                CapBallSpinnerE.setSelection(0);
+
+                CapballScoreIntA = 0;
+                CapballScoreIntE = 0;
+                BeaconScoreIntE = 0;
+                CornerCountIntD = 0;
+
+                CenterCountIntD = 0;
+
+                CornerCountIntA = 0;
+
+                CenterCountIntA = 0;
+                BeaconScoreIntA = 0;
+                ParkedScoreIntA = 0;
+
+
+
+                CornerScoreA.setText(Integer.toString(0));
+                CornerCountLabelA.setText(Integer.toString(0));
+
+                CenterScoreA.setText(Integer.toString(0));
+                CenterCountLabelA.setText(Integer.toString(0));
+
+
+                CenterScoreD.setText(Integer.toString(0));
+                CenterCountLabelD.setText(Integer.toString(0));
+
+                CornerScoreD.setText(Integer.toString(0));
+                CornerCountLabelD.setText(Integer.toString(0));
+
+
+                DriverScoreIntD = 0;
+                DriverScoreIntD = (CornerCountIntD)+(CenterCountIntD*5);
+                DriverScore.setText(Integer.toString(DriverScoreIntD));
+
+                AutoScoreIntA = 0;
+//                ((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
+                AutoScore.setText(Integer.toString(0));
+                TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
+
+
+
+            }
+        });
+
+
+
+
 
 
 
 
     }
-    }
+
+}
 
 
 
