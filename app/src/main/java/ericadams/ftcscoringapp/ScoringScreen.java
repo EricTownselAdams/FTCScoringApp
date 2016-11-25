@@ -1,18 +1,20 @@
-    package ericadams.ftcscoringapp;
+package ericadams.ftcscoringapp;
 
-    import android.support.v7.app.AppCompatActivity;
-    import android.os.Bundle;
-    import android.util.Log;
-    import android.view.View;
-    import android.widget.AdapterView;
-    import android.widget.ArrayAdapter;
-    import android.widget.Button;
-    import android.widget.Spinner;
-    import android.widget.TextView;
-    import android.widget.AdapterView.OnItemSelectedListener;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.AdapterView.OnItemSelectedListener;
+
+import org.w3c.dom.Text;
 
 
-    public class ScoringScreen extends AppCompatActivity  {
+public class ScoringScreen extends AppCompatActivity  {
 
     Spinner CapBallSpinnerA;
     ArrayAdapter<CharSequence> CapBallAdapterAA;
@@ -41,11 +43,11 @@
 
     Button ResetButton;
 
-    int CenterCountIntD = 0;
-    int CornerCountIntD = 0;
+    int CenterCountIntD;
+    int CornerCountIntD;
 
-    int CornerCountIntA = 0;
-    int CenterCountIntA = 0;
+    int CornerCountIntA;
+    int CenterCountIntA;
     int AutoScoreIntA = 0;
     int BeaconScoreIntA = 0;
     int ParkedScoreIntA = 0;
@@ -53,13 +55,13 @@
     int CenterScoreIntA = 0;
     int CapballScoreIntA = 0;
 
-    int DriverScoreIntD = 0;
-    int CenterScoreIntD = 0;
-    int CornerScoreIntD = 0;
+    int DriverScoreIntD;
+    int CenterScoreIntD;
+    int CornerScoreIntD;
 
-    int EndScoreIntE = 0;
-    int CapballScoreIntE = 0;
-    int BeaconScoreIntE = 0;
+    int EndScoreIntE;
+    int CapballScoreIntE;
+    int BeaconScoreIntE;
 
 
     @Override
@@ -126,7 +128,7 @@
                 if (CapBallSpinnerA.getSelectedItem().toString().equals("On Floor")){
                     CapBallScoreA.setText("5");
                     CapballScoreIntA = 5;
-                } else if (CapBallSpinnerA.getSelectedItem().toString().equals("On Center Goal")){
+                } else{
                     CapBallScoreA.setText("0");
                     CapballScoreIntA = 0;
                     //txtValue.setText(Integer.toString(0));
@@ -158,14 +160,13 @@
                     BeaconScoreIntA = 30;
                 } else if(BeaconSpinnerA.getSelectedItem().toString().equals("2 Beacons")){
                     BeaconScoreIntA = 60;
-                } else {
-                    //if(BeaconSpinnerA.getSelectedItem().toString().equals("0 Beacons"))
+                } else if(BeaconSpinnerA.getSelectedItem().toString().equals("0 Beacons")){
                     BeaconScoreIntA = 0;
                 }
                // BeaconScoreA.setText(Integer.toString(BeaconScore));
+                BeaconScoreA.setText(Integer.toString(BeaconScoreIntA));
                 AutoScoreIntA = 0;
                 AutoScoreIntA = (CornerScoreIntA+CenterScoreIntA+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
-                BeaconScoreA.setText(Integer.toString(BeaconScoreIntA));
                 AutoScore.setText(Integer.toString(AutoScoreIntA));
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
@@ -198,16 +199,15 @@
                 } else if(ParkedSpinnerA.getSelectedItem().toString().equals("Full Corner")){
                     ParkedScoreIntA = 10;
                     ParkedScoreA.setText("10");
-                } else {
-                    //if(ParkedSpinnerA.getSelectedItem().toString().equals("Not Parked"))
+                } else if(ParkedSpinnerA.getSelectedItem().toString().equals("Not Parked")){
                     ParkedScoreIntA = 0;
                     ParkedScoreA.setText("0");
 
                 }
 
-                //ParkedScoreA.setText(Integer.toString(ParkedScoreIntA));
+//                ParkedScoreA.setText(Integer.toString(ParkedScoreIntA));
 
-                //AutoScoreIntA = 0;
+//                AutoScoreIntA = 0;
                 AutoScoreIntA = ((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 AutoScore.setText(Integer.toString(AutoScoreIntA));
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
@@ -478,9 +478,6 @@
         ResetButton.setOnClickListener(new View.OnClickListener(){
 
             TextView CapBallLabelA = (TextView) findViewById(R.id.CapBallLabelA);
-            TextView CapBallScoreA = (TextView) findViewById(R.id.CapBallScoreA);
-            TextView BeaconScoreA = (TextView) findViewById(R.id.BeaconScoreA);
-            TextView ParkedScoreA = (TextView) findViewById(R.id.ParkedScoreA);
 
             TextView CornerScoreA = (TextView) findViewById(R.id.CornerScoreA);
             TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
@@ -508,25 +505,16 @@
                 CapballScoreIntE = 0;
                 BeaconScoreIntE = 0;
                 CornerCountIntD = 0;
+
                 CenterCountIntD = 0;
+
                 CornerCountIntA = 0;
+
                 CenterCountIntA = 0;
                 BeaconScoreIntA = 0;
                 ParkedScoreIntA = 0;
 
-                CapBallSpinnerA.setSelection(0);
-                BeaconSpinnerA.setSelection(0);
-                ParkedSpinnerA.setSelection(0);
-                BeaconSpinnerE.setSelection(0);
-                CapBallSpinnerE.setSelection(0);
 
-                ParkedScoreA.setText("0");
-                CapBallScoreA.setText("0");
-                CapballScoreIntA = 0;
-
-
-
-                BeaconScoreA.setText(Integer.toString(0));
 
                 CornerScoreA.setText(Integer.toString(0));
                 CornerCountLabelA.setText(Integer.toString(0));
@@ -541,34 +529,16 @@
                 CornerScoreD.setText(Integer.toString(0));
                 CornerCountLabelD.setText(Integer.toString(0));
 
+
                 DriverScoreIntD = 0;
                 DriverScoreIntD = (CornerCountIntD)+(CenterCountIntD*5);
                 DriverScore.setText(Integer.toString(DriverScoreIntD));
 
                 AutoScoreIntA = 0;
-                AutoScoreIntA = ((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
+//                ((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 AutoScore.setText(Integer.toString(0));
-
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
-
-               /* System.out.print(CapballScoreIntA);
-                System.out.print(CapballScoreIntE);
-
-                System.out.print(BeaconScoreIntE);
-                System.out.print(CornerCountIntD);
-
-                System.out.print(CenterCountIntD);
-
-                System.out.print(CornerCountIntA);
-
-                System.out.print(CenterCountIntA);
-
-                System.out.print(BeaconScoreIntA);
-
-                System.out.print(ParkedScoreIntA);
-
-                */
 
 
             }
