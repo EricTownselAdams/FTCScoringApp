@@ -25,20 +25,6 @@
     </string-array>
 
 
-    <string-array name="CapBallEOptions">
-        <item>On Floor</item>
-        <item>Off Playing Field</item>
-        <item>Above 40"</item>
-        <item>Capped Center Goal</item>
-    </string-array>
-
-    <string-array name="BeaconOptionsE">
-        <item>0 Beacons</item>
-        <item>1 Beacon</item>
-        <item>2 Beacons</item>
-        <item>3 Beacons</item>
-        <item>4 Beacons</item>
-    </string-array>
 
 </resources>
 
