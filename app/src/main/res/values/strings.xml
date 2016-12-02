@@ -39,6 +39,10 @@
         <item>3 Beacons</item>
         <item>4 Beacons</item>
     </string-array>
+    <string name="title_activity_start_menu">Start Menu</string>
+
+    <string name="StartScoring">StartScoring</string>
+    <string name="AboutPage">About Page</string>
 
 </resources>
 

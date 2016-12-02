@@ -13,6 +13,7 @@
     // Cap ball score variable called
     "CapBallScoreA"
 
+
     // Autonomous Label displays "Autonomous Score"
 
     // Cap ball label displays "Cap Ball Is"
@@ -490,16 +491,6 @@
         android:layout_toEndOf="@+id/CenterPlusD" />
 
     <TextView
-        android:text="Total Score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/TotalScoreLabel"
-        android:textSize="30sp"
-        android:textColor="@android:color/black"
-        android:layout_alignBottom="@+id/ResetButton"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
         android:text="0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -531,6 +522,17 @@
         android:layout_below="@+id/CapBallSpinnerE"
         android:layout_alignLeft="@+id/CornerLabelD"
         android:layout_alignStart="@+id/CornerLabelD" />
+
+    <TextView
+        android:text=" Total Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TotalScoreLabel"
+        android:textSize="25sp"
+        android:textColor="@android:color/black"
+        android:layout_alignBottom="@+id/ResetButton"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="viewStart" />
 
 
 </RelativeLayout>
