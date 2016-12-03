@@ -42,9 +42,11 @@
     <string name="title_activity_start_menu">Start Menu</string>
 
     <string name="StartScoring">StartScoring</string>
+    <string name="StartScouting">StartScouting</string>
     <string name="AboutPage">About Page</string>
     <string name="MenuPage">Back To Menu</string>
     <string name="SavedScoresPage">Saved Scores</string>
+    <string name="SavedScore">Saved Score</string>
 
 </resources>
 

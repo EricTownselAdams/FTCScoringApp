@@ -446,19 +446,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CenterScoreD"
-        android:textSize="14sp"
-        android:textColor="@android:color/black"
-        android:text="0"
-        android:layout_below="@+id/DriverScore"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="14dp"
-        android:layout_marginEnd="14dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/BeaconScoreE"
         android:textSize="14sp"
         android:textColor="@android:color/black"
@@ -501,18 +488,6 @@
         android:layout_toEndOf="@+id/CenterPlusA" />
 
     <TextView
-        android:text="0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/TotalScore"
-        android:textSize="30sp"
-        android:textColor="@android:color/black"
-        android:layout_alignBaseline="@+id/TotalScoreLabel"
-        android:layout_alignBottom="@+id/TotalScoreLabel"
-        android:layout_alignLeft="@+id/EndScore"
-        android:layout_alignStart="@+id/EndScore" />
-
-    <TextView
         android:text=" Total Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -544,6 +519,31 @@
         android:layout_alignBottom="@+id/ResetButton"
         android:layout_alignRight="@+id/CapBallScoreE"
         android:layout_alignEnd="@+id/CapBallScoreE" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TotalScore"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/TotalScoreLabel"
+        android:layout_alignBottom="@+id/TotalScoreLabel"
+        android:layout_toLeftOf="@+id/EndScore"
+        android:layout_toStartOf="@+id/EndScore" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CenterScoreD"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/DriverScore"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

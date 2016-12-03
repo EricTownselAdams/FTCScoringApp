@@ -17,12 +17,17 @@ public class StartMenu extends AppCompatActivity {
         Intent GoToScoring = new Intent(this, ScoringScreen.class);
         startActivity(GoToScoring);
     }
-    public void AboutPage(View view){
+    public void AboutPage(View view) {
         Intent GoToAbout = new Intent(this, About.class);
         startActivity(GoToAbout);
     }
-    public void SavedScoresPage(View view){
+    public void StartScouting(View view) {
+        Intent GoToScouting = new Intent(this, ScoutingScreen.class);
+        startActivity(GoToScouting);
+    }
+    /*public void SavedScoresPage(View view){
         Intent GoToSaved = new Intent(this, SavedScores.class);
         startActivity(GoToSaved);
-    }
+    }*/
+
 }

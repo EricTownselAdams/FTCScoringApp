@@ -29,5 +29,17 @@
         android:id="@+id/About"
         android:onClick="AboutPage"
         android:layout_below="@+id/StartScoring"
-        android:layout_centerHorizontal="true" />
+        android:layout_toRightOf="@+id/StartScoring"
+        android:layout_toEndOf="@+id/StartScoring" />
+
+    <Button
+        android:text="Go Scouting!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ScoutingButton"
+        android:layout_alignBaseline="@+id/About"
+        android:layout_alignBottom="@+id/About"
+        android:layout_toLeftOf="@+id/About"
+        android:layout_toStartOf="@+id/About"
+        android:onClick="StartScouting"/>
 </RelativeLayout>

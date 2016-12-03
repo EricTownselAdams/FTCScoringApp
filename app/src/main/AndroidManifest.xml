@@ -20,7 +20,8 @@
             android:label="@string/title_activity_start_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".About" />
-        <activity android:name=".SavedScores"></activity>
+        <activity android:name=".SavedScores" />
+        <activity android:name=".ScoutingScreen"></activity>
     </application>
 
 </manifest>
