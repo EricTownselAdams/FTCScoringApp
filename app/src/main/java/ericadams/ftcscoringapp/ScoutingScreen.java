@@ -14,61 +14,61 @@ import android.widget.TextView;
 
 
 public class ScoutingScreen extends AppCompatActivity  {
-    public void StartMenuScouting(View view) {
-        Intent GoToMenuScouting = new Intent(this, StartMenu.class);
-        startActivity(GoToMenuScouting);
+    public void StartMenu(View view) {
+        Intent GoToMenu = new Intent(this, StartMenu.class);
+        startActivity(GoToMenu);
 
     }
 
-    private Spinner CapBallSpinnerA;
-    private ArrayAdapter<CharSequence> CapBallAdapterAA;
+    Spinner CapBallSpinnerA;
+    ArrayAdapter<CharSequence> CapBallAdapterAA;
 
-    private Spinner BeaconSpinnerA;
-    private ArrayAdapter<CharSequence> BeaconAdapterA;
+    Spinner BeaconSpinnerA;
+    ArrayAdapter<CharSequence> BeaconAdapterA;
 
-    private Spinner ParkedSpinnerA;
-    private ArrayAdapter<CharSequence> ParkedAdapterA;
+    Spinner ParkedSpinnerA;
+    ArrayAdapter<CharSequence> ParkedAdapterA;
 
-    private Spinner CapBallSpinnerE;
-    private ArrayAdapter<CharSequence> CapBallAdapterE;
+    Spinner CapBallSpinnerE;
+    ArrayAdapter<CharSequence> CapBallAdapterE;
 
-    private Spinner BeaconSpinnerE;
-    private ArrayAdapter<CharSequence> BeaconAdapterE;
+    Spinner BeaconSpinnerE;
+    ArrayAdapter<CharSequence> BeaconAdapterE;
 
-    private Button CenterPlusA;
-    private Button CenterMinusA;
-    private Button CornerPlusA;
-    private Button CornerMinusA;
+    Button CenterPlusA;
+    Button CenterMinusA;
+    Button CornerPlusA;
+    Button CornerMinusA;
 
-    private Button CenterPlusD;
-    private Button CenterMinusD;
-    private Button CornerPlusD;
-    private Button CornerMinusD;
+    Button CenterPlusD;
+    Button CenterMinusD;
+    Button CornerPlusD;
+    Button CornerMinusD;
 
-    private Button ResetButton;
-    private Button SaveScoreButton;
+    Button ResetButton;
+    Button SaveScoreButton;
 
-    private int CenterCountIntD;
-    private int CornerCountIntD;
+    int CenterCountIntD;
+    int CornerCountIntD;
 
-    private int CornerCountIntA;
-    private int CenterCountIntA;
-    private int AutoScoreIntA = 0;
-    private int BeaconScoreIntA = 0;
-    private int ParkedScoreIntA = 0;
-    private int CornerScoreIntA = 0;
-    private int CenterScoreIntA = 0;
-    private int CapballScoreIntA = 0;
+    int CornerCountIntA;
+    int CenterCountIntA;
+    int AutoScoreIntA = 0;
+    int BeaconScoreIntA = 0;
+    int ParkedScoreIntA = 0;
+    int CornerScoreIntA = 0;
+    int CenterScoreIntA = 0;
+    int CapballScoreIntA = 0;
 
-    private int DriverScoreIntD;
-    private int CenterScoreIntD;
-    private int CornerScoreIntD;
+    int DriverScoreIntD;
+    int CenterScoreIntD;
+    int CornerScoreIntD;
 
-    private int EndScoreIntE;
-    private int CapballScoreIntE;
+    int EndScoreIntE;
+    int CapballScoreIntE;
     int BeaconScoreIntE;
 
-    private int TotalScoreInt;
+    int TotalScoreInt;
 
 
 
@@ -85,7 +85,7 @@ public class ScoutingScreen extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scoring_screen);
+        setContentView(R.layout.activity_scouting_screen);
 
 
 
@@ -227,8 +227,6 @@ public class ScoutingScreen extends AppCompatActivity  {
                     ParkedScoreIntA = 10;
                     ParkedScoreA.setText("10");
                 } else if(ParkedSpinnerA.getSelectedItem().toString().equals("Not Parked")){
-                    ParkedScoreIntA = 0;
-                    ParkedScoreA.setText("0");
 
                 }
 
@@ -236,7 +234,6 @@ public class ScoutingScreen extends AppCompatActivity  {
 
 //                AutoScoreIntA = 0;
                 AutoScoreIntA = ((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
-                AutoScore.setText(Integer.toString(AutoScoreIntA));
                 TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
@@ -579,7 +576,32 @@ public class ScoutingScreen extends AppCompatActivity  {
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
             }
         });
+/*
+        SaveScoreButton.setOnClickListener(new View.OnClickListener(){
+
+
+            public void onClick(View v){
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
+
+                SharedPreferences.Editor mEditor = SavedScore.edit();
+                mEditor.putInt("Total Score", TotalScoreInt).commit();
+
+            }
+        });
+*/
+
+
+
+
+
+
+
+
+
     }
+       /* public void onPause(){
+
+    }*/
 }
 
 
