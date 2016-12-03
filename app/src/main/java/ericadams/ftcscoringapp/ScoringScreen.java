@@ -1,20 +1,25 @@
 package ericadams.ftcscoringapp;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
+import android.icu.util.Calendar;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.AdapterView.OnItemSelectedListener;
-
-import org.w3c.dom.Text;
 
 
 public class ScoringScreen extends AppCompatActivity  {
+    public void StartMenu(View view) {
+        Intent GoToMenu = new Intent(this, StartMenu.class);
+        startActivity(GoToMenu);
+
+    }
 
     Spinner CapBallSpinnerA;
     ArrayAdapter<CharSequence> CapBallAdapterAA;
@@ -42,6 +47,7 @@ public class ScoringScreen extends AppCompatActivity  {
     Button CornerMinusD;
 
     Button ResetButton;
+    Button SaveScoreButton;
 
     int CenterCountIntD;
     int CornerCountIntD;
@@ -63,11 +69,24 @@ public class ScoringScreen extends AppCompatActivity  {
     int CapballScoreIntE;
     int BeaconScoreIntE;
 
+    public int TotalScoreInt;
+//    public int SavedScore;
+
+
+    Calendar c = Calendar.getInstance();
+    //int day = c.get(Calendar.DAY_OF_MONTH);
+    int month = c.get(Calendar.DATE);
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scoring_screen);
+
+
 
         CapBallSpinnerA = (Spinner)findViewById(R.id.CapBallSpinA);//Here --------------------------
         CapBallAdapterAA = ArrayAdapter.createFromResource(this,R.array.CapBallAOptions,android.R.layout.simple_spinner_item);
@@ -100,6 +119,7 @@ public class ScoringScreen extends AppCompatActivity  {
         CornerPlusD = (Button)findViewById(R.id.CornerPlusD);
 
         ResetButton = (Button)findViewById(R.id.ResetButton);
+        //SaveScoreButton = (Button)findViewById(R.id.SaveScoreButton);
 
 
 
@@ -118,6 +138,7 @@ public class ScoringScreen extends AppCompatActivity  {
             TextView AutoScore = (TextView) findViewById(R.id.AutoScore);
             TextView CapBallScoreA = (TextView) findViewById(R.id.CapBallScoreA);
             TextView TotalScore = (TextView) findViewById(R.id.TotalScore);
+
 
 
 
@@ -140,6 +161,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 */              AutoScoreIntA = ((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 AutoScore.setText(Integer.toString(AutoScoreIntA));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
             }
@@ -170,6 +192,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 BeaconScoreA.setText(Integer.toString(BeaconScoreIntA));
                 AutoScoreIntA = ((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 AutoScore.setText(Integer.toString(AutoScoreIntA));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
 
@@ -213,6 +236,7 @@ public class ScoringScreen extends AppCompatActivity  {
 //                AutoScoreIntA = 0;
                 AutoScoreIntA = ((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 AutoScore.setText(Integer.toString(AutoScoreIntA));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
             }
@@ -240,6 +264,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 AutoScoreIntA = 0;
                 AutoScoreIntA = ((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 AutoScore.setText(Integer.toString(AutoScoreIntA));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
             }
@@ -264,6 +289,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 AutoScoreIntA = 0;
 ;               AutoScoreIntA = ((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 AutoScore.setText(Integer.toString(AutoScoreIntA));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
 
@@ -287,6 +313,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 CornerScoreIntA = (CornerCountIntA*5);
                 AutoScoreIntA = ((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 AutoScore.setText(Integer.toString(AutoScoreIntA));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
             }
@@ -310,6 +337,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 CornerScoreIntA += (CornerCountIntA*5);
                 AutoScoreIntA = ((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 AutoScore.setText(Integer.toString(AutoScoreIntA));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
 
@@ -335,6 +363,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 DriverScoreIntD = 0;
                 DriverScoreIntD = (CornerCountIntD)+(CenterCountIntD*5);
                 DriverScore.setText(Integer.toString(DriverScoreIntD));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
             }
@@ -357,6 +386,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 DriverScoreIntD = 0;
                 DriverScoreIntD = (CornerCountIntD)+(CenterCountIntD*5);
                 DriverScore.setText(Integer.toString(DriverScoreIntD));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
 
@@ -380,6 +410,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 DriverScoreIntD = 0;
                 DriverScoreIntD = (CornerCountIntD)+(CenterCountIntD*5);
                 DriverScore.setText(Integer.toString(DriverScoreIntD));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
 
@@ -401,6 +432,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 DriverScoreIntD = 0;
                 DriverScoreIntD = (CornerCountIntD)+(CenterCountIntD*5);
                 DriverScore.setText(Integer.toString(DriverScoreIntD));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
 
@@ -432,6 +464,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 }
                 EndScoreIntE = (CapballScoreIntE+BeaconScoreIntE);
                 EndScore.setText(Integer.toString(EndScoreIntE));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
             }
@@ -468,6 +501,7 @@ public class ScoringScreen extends AppCompatActivity  {
                 }
                 EndScoreIntE = (CapballScoreIntE+BeaconScoreIntE);
                 EndScore.setText(Integer.toString(EndScoreIntE));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
 
             }
@@ -540,13 +574,21 @@ public class ScoringScreen extends AppCompatActivity  {
                 AutoScoreIntA = 0;
 //                ((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 AutoScore.setText(Integer.toString(0));
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
                 TotalScore.setText(Integer.toString((CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA)));
+            }
+        });
+    /*    SaveScoreButton.setOnClickListener(new View.OnClickListener(){
 
 
+            public void onClick(View v){
+                TotalScoreInt = (CapballScoreIntE+BeaconScoreIntE)+(CornerCountIntD)+(CenterCountIntD*5)+((CornerCountIntA*5)+(CenterCountIntA*15)+BeaconScoreIntA+ParkedScoreIntA+CapballScoreIntA);
+                final TextView SavedScoreTV  = findViewById(R.id.SavedScore1);
 
             }
         });
 
+*/
 
 
 

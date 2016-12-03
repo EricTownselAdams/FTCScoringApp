@@ -9,6 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/ftcbackground"
     tools:context="ericadams.ftcscoringapp.startmenu">
 
 
@@ -17,20 +18,16 @@
         android:text="Start Scoring!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="171dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="StartScoring"/>
+        android:onClick="StartScoring"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="About"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/StartScoring"
-        android:layout_alignLeft="@+id/StartScoring"
-        android:layout_alignStart="@+id/StartScoring"
         android:id="@+id/About"
-        android:layout_alignRight="@+id/StartScoring"
-        android:layout_alignEnd="@+id/StartScoring"
-        android:onClick="AboutPage"/>
+        android:onClick="AboutPage"
+        android:layout_below="@+id/StartScoring"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

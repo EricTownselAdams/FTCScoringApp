@@ -19,7 +19,8 @@
             android:name=".ScoringScreen"
             android:label="@string/title_activity_start_menu"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".About"></activity>
+        <activity android:name=".About" />
+        <activity android:name=".SavedScores"></activity>
     </application>
 
 </manifest>

@@ -43,6 +43,8 @@
 
     <string name="StartScoring">StartScoring</string>
     <string name="AboutPage">About Page</string>
+    <string name="MenuPage">Back To Menu</string>
+    <string name="SavedScoresPage">Saved Scores</string>
 
 </resources>
 

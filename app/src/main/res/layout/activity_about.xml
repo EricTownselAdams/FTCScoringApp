@@ -8,26 +8,26 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ericadams.ftcscoringapp.About">
+    tools:context="ericadams.ftcscoringapp.About"
+    android:background="@drawable/ftcaboutbackground">
 
     <TextView
-        android:text="I am Eric Adams.  Programmer and Co-Team Captain of the FTC team #8417 'Lectric Legends.  I made this app while taking a programming class that took whatever you wanted to create, and helped oyu make it a reality.  "
+        android:text="I am Eric Adams.  Programmer and Co-Team Captain of the FTC team #8417 'Lectric Legends.  I made this app while taking a programming class.
+         "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textView"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Back To Menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/BackToMenuButton"
+        android:onClick = "StartMenu"
+        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="71dp"
-        android:id="@+id/BackToMenu" />
+        android:layout_marginTop="171dp" />
 </RelativeLayout>

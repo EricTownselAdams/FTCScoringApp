@@ -146,7 +146,6 @@
         android:textColor="@android:color/black"
         android:layout_alignBaseline="@+id/CornerMinusA"
         android:layout_alignBottom="@+id/CornerMinusA"
-        android:layout_toStartOf="@+id/ParkedSpinnerA"
         android:layout_alignRight="@+id/CenterLabelA"
         android:layout_alignEnd="@+id/CenterLabelA" />
 
@@ -510,18 +509,8 @@
         android:textColor="@android:color/black"
         android:layout_alignBaseline="@+id/TotalScoreLabel"
         android:layout_alignBottom="@+id/TotalScoreLabel"
-        android:layout_toLeftOf="@+id/CapBallScoreE"
-        android:layout_toStartOf="@+id/CapBallScoreE" />
-
-    <Button
-        android:text="Reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ResetButton"
-        android:layout_marginTop="21dp"
-        android:layout_below="@+id/CapBallSpinnerE"
-        android:layout_alignLeft="@+id/CornerLabelD"
-        android:layout_alignStart="@+id/CornerLabelD" />
+        android:layout_alignLeft="@+id/EndScore"
+        android:layout_alignStart="@+id/EndScore" />
 
     <TextView
         android:text=" Total Score"
@@ -530,9 +519,31 @@
         android:id="@+id/TotalScoreLabel"
         android:textSize="25sp"
         android:textColor="@android:color/black"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/CapBallSpinnerE"
+        android:layout_toLeftOf="@+id/BeaconSpinnerE"
+        android:layout_toStartOf="@+id/BeaconSpinnerE" />
+
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ResetButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/TotalScoreLabel"
+        android:layout_alignStart="@+id/TotalScoreLabel"
+        android:layout_marginBottom="13dp" />
+
+    <Button
+        android:text="Back To Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BackToMenuScoring"
+        android:onClick="StartMenu"
+        android:layout_alignBaseline="@+id/ResetButton"
         android:layout_alignBottom="@+id/ResetButton"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="viewStart" />
+        android:layout_alignRight="@+id/CapBallScoreE"
+        android:layout_alignEnd="@+id/CapBallScoreE" />
 
 
 </RelativeLayout>
