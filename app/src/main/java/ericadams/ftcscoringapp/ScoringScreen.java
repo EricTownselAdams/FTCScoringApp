@@ -14,9 +14,9 @@ import android.widget.TextView;
 
 
 public class ScoringScreen extends AppCompatActivity  {
-    public void StartMenuScoring(View view) {
-        Intent GoToMenuScoring = new Intent(this, StartMenu.class);
-        startActivity(GoToMenuScoring);
+    public void StartMenu(View view) {
+        Intent GoToMenu = new Intent(this, StartMenu.class);
+        startActivity(GoToMenu);
 
     }
 

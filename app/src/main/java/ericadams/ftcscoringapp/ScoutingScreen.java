@@ -14,9 +14,9 @@ import android.widget.TextView;
 
 
 public class ScoutingScreen extends AppCompatActivity  {
-    public void StartMenuScouting(View view) {
-        Intent GoToMenuScouting = new Intent(this, StartMenu.class);
-        startActivity(GoToMenuScouting);
+    public void StartMenu(View view) {
+        Intent GoToMenu = new Intent(this, StartMenu.class);
+        startActivity(GoToMenu);
 
     }
 
