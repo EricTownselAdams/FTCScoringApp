@@ -5,13 +5,18 @@ package ericadams.ftcscoringapp;
  */
 
 public class Variables {
-    private int CenterCountIntD;
-    private int CornerCountIntD;
+    private int CenterCountIntD = 0;
+    private int CornerCountIntD = 0;
 
-    private int CornerCountIntA;
-    private int CenterCountIntA;
+    private int CornerCountIntA = 0;
+    private int CenterCountIntA = 0;
     private int BeaconScoreIntA = 0;
     private int ParkedScoreIntA = 0;
+
+    public void setCornerScoreIntA(int cornerScoreIntA) {
+        CornerScoreIntA = cornerScoreIntA;
+    }
+
     private int CornerScoreIntA = 0;
     private int CenterScoreIntA = 0;
     private int CapballScoreIntA = 0;
@@ -61,7 +66,7 @@ public class Variables {
         CornerCountIntA = cornerCountIntA;
     }
     public void decrementCenterCountIntA(){
-        CornerCountIntA = CornerCountIntA - 1;
+        CenterCountIntA = CenterCountIntA - 1;
     }
     public void incrementCenterCountIntA(){
         CenterCountIntA = CenterCountIntA + 1;

@@ -163,7 +163,6 @@ public class ScoringScreen extends AppCompatActivity {
                 }
                 // BeaconScoreA.setText(Integer.toString(BeaconScore));
                 BeaconScoreA.setText(Integer.toString(Data.getBeaconScoreIntA()));
-                Data.getAutoScoreIntA();
                 AutoScore.setText(Integer.toString(Data.getAutoScoreIntA()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
 
@@ -226,14 +225,13 @@ public class ScoringScreen extends AppCompatActivity {
                 Data.decrementCenterCountIntA();
                 CenterScoreA.setText(Integer.toString(Data.getCenterCountIntA() * 15));
                 CenterBallCountLabel.setText(Integer.toString(Data.getCenterCountIntA()));
+
                 int TempCenterScore = Data.getCenterScoreIntA();
                 TempCenterScore +=(Data.getCenterCountIntA() * 15);
-                Data.setCenterCountIntA(TempCenterScore);
-                Data.getAutoScoreIntA();
+                Data.setCenterScoreIntA(TempCenterScore);
+
                 AutoScore.setText(Integer.toString(Data.getAutoScoreIntA()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
-
-
             }
         });
 
@@ -243,21 +241,17 @@ public class ScoringScreen extends AppCompatActivity {
             TextView CenterScoreA = (TextView) findViewById(R.id.CenterScoreA);
             TextView TotalScore = (TextView) findViewById(R.id.TotalScore);
 
-
             public void onClick(View v) {
                 Data.incrementCenterCountIntA();
                 CenterScoreA.setText(Integer.toString(Data.getCenterCountIntA() * 15));
                 CenterBallCountLabel.setText(Integer.toString(Data.getCenterCountIntA()));
 
                 int TempCenterScore = Data.getCenterScoreIntA();
-                TempCenterScore = (Data.getCenterCountIntA() * 5);
-               // AutoScoreIntA = 0;
+                TempCenterScore +=(Data.getCenterCountIntA() * 15);
+                Data.setCenterScoreIntA(TempCenterScore);
 
-                Data.getAutoScoreIntA();
                 AutoScore.setText(Integer.toString(Data.getAutoScoreIntA()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
-
-
             }
         });
 
@@ -274,7 +268,8 @@ public class ScoringScreen extends AppCompatActivity {
                 CornerBallCountA.setText(Integer.toString(Data.getCornerCountIntA()));
                 int TempCornerScore = Data.getCornerScoreIntA();
                 TempCornerScore = (Data.getCornerCountIntA() * 5);
-                Data.getAutoScoreIntA();
+                Data.setCornerScoreIntA(TempCornerScore);
+
                 AutoScore.setText(Integer.toString(Data.getAutoScoreIntA()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
 
@@ -295,12 +290,10 @@ public class ScoringScreen extends AppCompatActivity {
 
                 int TempCornerScore = Data.getCornerScoreIntA();
                 TempCornerScore += (Data.getCornerCountIntA() * 5);
-                Data.setCornerScoreIntD(TempCornerScore);
+                Data.setCornerScoreIntA(TempCornerScore);
                 Data.getAutoScoreIntA();
                 AutoScore.setText(Integer.toString(Data.getAutoScoreIntA()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
-
-
             }
         });
 
@@ -312,17 +305,17 @@ public class ScoringScreen extends AppCompatActivity {
             TextView CornerScoreD = (TextView) findViewById(R.id.CornerScoreD);
             TextView TotalScore = (TextView) findViewById(R.id.TotalScore);
 
-
             public void onClick(View v) {
                 Data.incrementCornerCountIntD();
                 CornerScoreD.setText(Integer.toString(Data.getCornerCountIntD()));
                 CornerCountLabelD.setText(Integer.toString(Data.getCornerCountIntD()));
+
                 int TempCornerCountIntD = Data.getCornerCountIntD();
-                TempCornerCountIntD = (Data.getCornerCountIntD()) + (Data.getCenterCountIntD() * 5);
+                TempCornerCountIntD = ((Data.getCornerCountIntD()));
                 Data.setCornerCountIntD(TempCornerCountIntD);
+
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
-
             }
         });
 
@@ -332,14 +325,15 @@ public class ScoringScreen extends AppCompatActivity {
             TextView CornerScoreD = (TextView) findViewById(R.id.CornerScoreD);
             TextView TotalScore = (TextView) findViewById(R.id.TotalScore);
 
-
             public void onClick(View v) {
                 Data.decrementCornerCountIntD();
                 CornerScoreD.setText(Integer.toString(Data.getCornerCountIntD()));
                 CornerCountLabelD.setText(Integer.toString(Data.getCornerCountIntD()));
+
                 int TempCornerScoreInt = Data.getCornerScoreIntD();
-                TempCornerScoreInt = (Data.getCornerCountIntD()) + (Data.getCenterCountIntD() * 5);
+                TempCornerScoreInt = ((Data.getCornerCountIntD()));
                 Data.setCornerScoreIntD(TempCornerScoreInt);
+
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
 
@@ -354,12 +348,13 @@ public class ScoringScreen extends AppCompatActivity {
 
 
             public void onClick(View v) {
-                Data.incrementCornerCountIntD();
+                Data.incrementCenterCountIntD();
                 CenterScoreD.setText(Integer.toString(Data.getCenterCountIntD() * 5));
                 CenterCountLabelD.setText(Integer.toString(Data.getCenterCountIntD()));
-                int TempCornerScoreInt = Data.getCornerScoreIntD();
-                TempCornerScoreInt = (Data.getCornerCountIntD()) + (Data.getCenterCountIntD() * 5);
-                Data.setCornerScoreIntD(TempCornerScoreInt);
+
+                int TempCenterScoreInt = Data.getCenterScoreIntD();
+                TempCenterScoreInt = ( (Data.getCenterCountIntD() * 5));
+                Data.setCenterScoreIntD(TempCenterScoreInt);
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
 
@@ -379,8 +374,7 @@ public class ScoringScreen extends AppCompatActivity {
                 CenterCountLabelD.setText(Integer.toString(Data.getCenterCountIntD()));
                 int TempCenterScoreInt = Data.getCenterScoreIntD();
                 TempCenterScoreInt = (Data.getCornerCountIntD()) + (Data.getCenterCountIntD() * 5);
-                Data.setCornerScoreIntD(TempCenterScoreInt);
-//                DriverScoreIntD = (CornerCountIntD) + (CenterCountIntD * 5);
+                Data.setCenterScoreIntD(TempCenterScoreInt);
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
 
@@ -412,7 +406,8 @@ public class ScoringScreen extends AppCompatActivity {
                     Data.setCapballScoreIntE(0);
                 }
                 int TempEndScore = Data.getEndScoreIntE();
-                TempEndScore = (Data.getCapballScoreIntE() + Data.getBeaconScoreIntA());
+                TempEndScore = (Data.getCapballScoreIntE() + Data.getBeaconScoreIntE());
+
                 Data.setEndScoreIntE(TempEndScore);
                 EndScore.setText(Integer.toString(Data.getEndScoreIntE()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
