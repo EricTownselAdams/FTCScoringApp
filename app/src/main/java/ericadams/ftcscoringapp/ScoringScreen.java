@@ -1,5 +1,6 @@
 package ericadams.ftcscoringapp;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -51,7 +52,7 @@ public class ScoringScreen extends AppCompatActivity {
     Button CornerMinusD;
 
     Button ResetButton;
-    Button SaveScoreButton;
+    Button SaveButton;
 
     Variables Data;
 
@@ -314,6 +315,7 @@ public class ScoringScreen extends AppCompatActivity {
                 TempCornerCountIntD = ((Data.getCornerCountIntD()));
                 Data.setCornerCountIntD(TempCornerCountIntD);
 
+                Data.setDriverScoreIntD(Data.getCornerScoreIntD() + Data.getCenterScoreIntD());
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
             }
@@ -334,6 +336,7 @@ public class ScoringScreen extends AppCompatActivity {
                 TempCornerScoreInt = ((Data.getCornerCountIntD()));
                 Data.setCornerScoreIntD(TempCornerScoreInt);
 
+                Data.setDriverScoreIntD(Data.getCornerScoreIntD() + Data.getCenterScoreIntD());
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
 
@@ -355,6 +358,8 @@ public class ScoringScreen extends AppCompatActivity {
                 int TempCenterScoreInt = Data.getCenterScoreIntD();
                 TempCenterScoreInt = ( (Data.getCenterCountIntD() * 5));
                 Data.setCenterScoreIntD(TempCenterScoreInt);
+
+                Data.setDriverScoreIntD(Data.getCornerScoreIntD() + Data.getCenterScoreIntD());
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
 
@@ -375,6 +380,8 @@ public class ScoringScreen extends AppCompatActivity {
                 int TempCenterScoreInt = Data.getCenterScoreIntD();
                 TempCenterScoreInt = (Data.getCornerCountIntD()) + (Data.getCenterCountIntD() * 5);
                 Data.setCenterScoreIntD(TempCenterScoreInt);
+
+                Data.setDriverScoreIntD(Data.getCornerScoreIntD() + Data.getCenterScoreIntD());
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
 
@@ -507,6 +514,32 @@ public class ScoringScreen extends AppCompatActivity {
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
             }
         });
+
+        SaveButton.setOnClickListener(new View.OnClickListener() {
+
+
+            public void onClick(View v) {
+
+
+
+
+
+
+
+
+                /*try {
+                    FileOutputStream fos =  Context.OU(new Data, Context.MODE_PRIVATE);
+                    ObjectOutputStream os = new ObjectOutputStream(fos);
+                    os.writeObject(this);
+                    os.close();
+                    fos.close();
+                } catch (IOException e){
+                    e.printStackTrace();
+                }*/
+
+            }
+        });
+
 /*
         SaveScoreButton.setOnClickListener(new View.OnClickListener(){
 

@@ -435,17 +435,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CapBallScoreE"
-        android:textSize="14sp"
-        android:textColor="@android:color/black"
-        android:text="0"
-        android:layout_alignBottom="@+id/CapBallSpinnerE"
-        android:layout_alignLeft="@+id/BeaconScoreE"
-        android:layout_alignStart="@+id/BeaconScoreE" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/BeaconScoreE"
         android:textSize="14sp"
         android:textColor="@android:color/black"
@@ -453,28 +442,6 @@
         android:layout_alignBottom="@+id/BeaconSpinnerE"
         android:layout_alignLeft="@+id/CornerScoreD"
         android:layout_alignStart="@+id/CornerScoreD" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/CapBallScoreA"
-        android:textSize="14sp"
-        android:textColor="@android:color/black"
-        android:text="0"
-        android:layout_below="@+id/AutoScore"
-        android:layout_alignLeft="@+id/CenterScoreD"
-        android:layout_alignStart="@+id/CenterScoreD" />
-
-    <TextView
-        android:text="0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/DriverScore"
-        android:textSize="24sp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_above="@+id/CenterCountLabelD"
-        android:layout_toRightOf="@+id/CenterPlusD"
-        android:layout_toEndOf="@+id/CenterPlusD" />
 
     <TextView
         android:text="0"
@@ -499,27 +466,6 @@
         android:layout_toLeftOf="@+id/BeaconSpinnerE"
         android:layout_toStartOf="@+id/BeaconSpinnerE" />
 
-    <Button
-        android:text="Reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ResetButton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/TotalScoreLabel"
-        android:layout_alignStart="@+id/TotalScoreLabel"
-        android:layout_marginBottom="13dp" />
-
-    <Button
-        android:text="Back To Menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/BackToMenuScoring"
-        android:onClick="StartMenu"
-        android:layout_alignBaseline="@+id/ResetButton"
-        android:layout_alignBottom="@+id/ResetButton"
-        android:layout_alignRight="@+id/CapBallScoreE"
-        android:layout_alignEnd="@+id/CapBallScoreE" />
-
     <TextView
         android:text="0"
         android:layout_width="wrap_content"
@@ -539,11 +485,71 @@
         android:textSize="14sp"
         android:textColor="@android:color/black"
         android:text="0"
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginEnd="26dp"
         android:layout_below="@+id/DriverScore"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CapBallScoreA"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_below="@+id/AutoScore"
+        android:layout_alignLeft="@+id/CenterScoreD"
+        android:layout_alignStart="@+id/CenterScoreD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CapBallScoreE"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_alignBottom="@+id/CapBallSpinnerE"
+        android:layout_alignLeft="@+id/BeaconScoreE"
+        android:layout_alignStart="@+id/BeaconScoreE" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DriverScore"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_above="@+id/CenterPlusD"
+        android:layout_toRightOf="@+id/CenterPlusD"
+        android:layout_toEndOf="@+id/CenterPlusD" />
+
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ResetButton"
+        android:layout_below="@+id/TotalScore"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Back To Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BackToMenuScoring"
+        android:onClick="StartMenu"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/ResetButton"
+        android:layout_toEndOf="@+id/ResetButton" />
+
+    <Button
+        android:text="Save Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SaveButton"
+        android:layout_below="@+id/ResetButton"
+        android:layout_toLeftOf="@+id/ResetButton"
+        android:layout_toStartOf="@+id/ResetButton" />
 
 
 </RelativeLayout>

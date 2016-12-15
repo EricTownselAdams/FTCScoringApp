@@ -1,10 +1,12 @@
 package ericadams.ftcscoringapp;
 
+import java.io.Serializable;
+
 /**
  * Created by Allison Adams on 12/8/2016.
  */
 
-public class Variables {
+public class Variables implements Serializable{
     private int CenterCountIntD = 0;
     private int CornerCountIntD = 0;
 
