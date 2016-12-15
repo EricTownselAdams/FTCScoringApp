@@ -6,19 +6,20 @@ import java.io.Serializable;
  * Created by Allison Adams on 12/8/2016.
  */
 
+<<<<<<< HEAD
 public class Variables implements Serializable{
     private int CenterCountIntD = 0;
     private int CornerCountIntD = 0;
+=======
+public class Variables {
+    private int CenterCountIntD;
+    private int CornerCountIntD;
+>>>>>>> parent of 32a213e... Classes Working correctly
 
-    private int CornerCountIntA = 0;
-    private int CenterCountIntA = 0;
+    private int CornerCountIntA;
+    private int CenterCountIntA;
     private int BeaconScoreIntA = 0;
     private int ParkedScoreIntA = 0;
-
-    public void setCornerScoreIntA(int cornerScoreIntA) {
-        CornerScoreIntA = cornerScoreIntA;
-    }
-
     private int CornerScoreIntA = 0;
     private int CenterScoreIntA = 0;
     private int CapballScoreIntA = 0;
@@ -68,7 +69,7 @@ public class Variables implements Serializable{
         CornerCountIntA = cornerCountIntA;
     }
     public void decrementCenterCountIntA(){
-        CenterCountIntA = CenterCountIntA - 1;
+        CornerCountIntA = CornerCountIntA - 1;
     }
     public void incrementCenterCountIntA(){
         CenterCountIntA = CenterCountIntA + 1;
