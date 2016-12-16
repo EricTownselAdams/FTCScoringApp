@@ -323,9 +323,12 @@ public class ScoringScreen extends AppCompatActivity {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Data.setDriverScoreIntD(Data.getCornerScoreIntD() + Data.getCenterScoreIntD());
 =======
 >>>>>>> parent of 32a213e... Classes Working correctly
+=======
+>>>>>>> parent of b85700e... WOrking a little with G and JSON
 =======
 >>>>>>> parent of b85700e... WOrking a little with G and JSON
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
@@ -351,9 +354,12 @@ public class ScoringScreen extends AppCompatActivity {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Data.setDriverScoreIntD(Data.getCornerScoreIntD() + Data.getCenterScoreIntD());
 =======
 >>>>>>> parent of 32a213e... Classes Working correctly
+=======
+>>>>>>> parent of b85700e... WOrking a little with G and JSON
 =======
 >>>>>>> parent of b85700e... WOrking a little with G and JSON
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
@@ -379,6 +385,7 @@ public class ScoringScreen extends AppCompatActivity {
                 TempCenterScoreInt = ( (Data.getCenterCountIntD() * 5));
                 Data.setCenterScoreIntD(TempCenterScoreInt);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 Data.setDriverScoreIntD(Data.getCornerScoreIntD() + Data.getCenterScoreIntD());
 =======
@@ -386,6 +393,8 @@ public class ScoringScreen extends AppCompatActivity {
                 TempCornerScoreInt = (Data.getCornerCountIntD()) + (Data.getCenterCountIntD() * 5);
                 Data.setCornerScoreIntD(TempCornerScoreInt);
 >>>>>>> parent of 32a213e... Classes Working correctly
+=======
+>>>>>>> parent of b85700e... WOrking a little with G and JSON
 =======
 >>>>>>> parent of b85700e... WOrking a little with G and JSON
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
@@ -410,12 +419,15 @@ public class ScoringScreen extends AppCompatActivity {
 <<<<<<< HEAD
                 Data.setCenterScoreIntD(TempCenterScoreInt);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 Data.setDriverScoreIntD(Data.getCornerScoreIntD() + Data.getCenterScoreIntD());
 =======
                 Data.setCornerScoreIntD(TempCenterScoreInt);
 //                DriverScoreIntD = (CornerCountIntD) + (CenterCountIntD * 5);
 >>>>>>> parent of 32a213e... Classes Working correctly
+=======
+>>>>>>> parent of b85700e... WOrking a little with G and JSON
 =======
 >>>>>>> parent of b85700e... WOrking a little with G and JSON
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));

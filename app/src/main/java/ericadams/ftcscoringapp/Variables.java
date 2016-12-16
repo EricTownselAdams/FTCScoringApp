@@ -6,7 +6,11 @@ package ericadams.ftcscoringapp;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class Variables implements Serializable{
+=======
+public class Variables {
+>>>>>>> parent of b85700e... WOrking a little with G and JSON
 =======
 public class Variables {
 >>>>>>> parent of b85700e... WOrking a little with G and JSON
