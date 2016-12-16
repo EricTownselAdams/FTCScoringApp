@@ -1,13 +1,15 @@
 package ericadams.ftcscoringapp;
 
-import java.io.Serializable;
-
 /**
  * Created by Allison Adams on 12/8/2016.
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class Variables implements Serializable{
+=======
+public class Variables {
+>>>>>>> parent of b85700e... WOrking a little with G and JSON
     private int CenterCountIntD = 0;
     private int CornerCountIntD = 0;
 =======

@@ -1,6 +1,5 @@
 package ericadams.ftcscoringapp;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -52,7 +51,7 @@ public class ScoringScreen extends AppCompatActivity {
     Button CornerMinusD;
 
     Button ResetButton;
-    Button SaveButton;
+    Button SaveScoreButton;
 
     Variables Data;
 
@@ -323,9 +322,12 @@ public class ScoringScreen extends AppCompatActivity {
                 Data.setCornerCountIntD(TempCornerCountIntD);
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                 Data.setDriverScoreIntD(Data.getCornerScoreIntD() + Data.getCenterScoreIntD());
 =======
 >>>>>>> parent of 32a213e... Classes Working correctly
+=======
+>>>>>>> parent of b85700e... WOrking a little with G and JSON
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
 
@@ -348,9 +350,12 @@ public class ScoringScreen extends AppCompatActivity {
                 Data.setCornerScoreIntD(TempCornerScoreInt);
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                 Data.setDriverScoreIntD(Data.getCornerScoreIntD() + Data.getCenterScoreIntD());
 =======
 >>>>>>> parent of 32a213e... Classes Working correctly
+=======
+>>>>>>> parent of b85700e... WOrking a little with G and JSON
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
 
@@ -373,6 +378,7 @@ public class ScoringScreen extends AppCompatActivity {
                 int TempCenterScoreInt = Data.getCenterScoreIntD();
                 TempCenterScoreInt = ( (Data.getCenterCountIntD() * 5));
                 Data.setCenterScoreIntD(TempCenterScoreInt);
+<<<<<<< HEAD
 
                 Data.setDriverScoreIntD(Data.getCornerScoreIntD() + Data.getCenterScoreIntD());
 =======
@@ -380,6 +386,8 @@ public class ScoringScreen extends AppCompatActivity {
                 TempCornerScoreInt = (Data.getCornerCountIntD()) + (Data.getCenterCountIntD() * 5);
                 Data.setCornerScoreIntD(TempCornerScoreInt);
 >>>>>>> parent of 32a213e... Classes Working correctly
+=======
+>>>>>>> parent of b85700e... WOrking a little with G and JSON
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
 
@@ -401,12 +409,15 @@ public class ScoringScreen extends AppCompatActivity {
                 TempCenterScoreInt = (Data.getCornerCountIntD()) + (Data.getCenterCountIntD() * 5);
 <<<<<<< HEAD
                 Data.setCenterScoreIntD(TempCenterScoreInt);
+<<<<<<< HEAD
 
                 Data.setDriverScoreIntD(Data.getCornerScoreIntD() + Data.getCenterScoreIntD());
 =======
                 Data.setCornerScoreIntD(TempCenterScoreInt);
 //                DriverScoreIntD = (CornerCountIntD) + (CenterCountIntD * 5);
 >>>>>>> parent of 32a213e... Classes Working correctly
+=======
+>>>>>>> parent of b85700e... WOrking a little with G and JSON
                 DriverScore.setText(Integer.toString(Data.getDriverScoreIntD()));
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
 
@@ -538,32 +549,6 @@ public class ScoringScreen extends AppCompatActivity {
                 TotalScore.setText(Integer.toString(Data.getTotalScoreInt()));
             }
         });
-
-        SaveButton.setOnClickListener(new View.OnClickListener() {
-
-
-            public void onClick(View v) {
-
-
-
-
-
-
-
-
-                /*try {
-                    FileOutputStream fos =  Context.OU(new Data, Context.MODE_PRIVATE);
-                    ObjectOutputStream os = new ObjectOutputStream(fos);
-                    os.writeObject(this);
-                    os.close();
-                    fos.close();
-                } catch (IOException e){
-                    e.printStackTrace();
-                }*/
-
-            }
-        });
-
 /*
         SaveScoreButton.setOnClickListener(new View.OnClickListener(){
 
